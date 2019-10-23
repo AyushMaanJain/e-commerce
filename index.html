@@ -2,7 +2,10 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+<style>
+* {box-sizing: border-box;}
 body {
   font-family: "Lato", sans-serif;
 }
@@ -12,7 +15,7 @@ margin-top:-1.5vh;
 margin-left:-10px;
 float:left;
 width:100%;
-background:#111;
+background:#181818;
 padding:15px 15px 15px 15px;
 }
 #optional{
@@ -23,6 +26,71 @@ float:left;
 padding:0px 10px 0px 10px;
 float:right;
 }
+
+#logo{
+float:left;
+margin-top:5px;
+margin-left:20px;
+padding:0px 20px 0px 20px;
+border:1px wheat solid;
+}
+
+#head .search-container {
+  float: right;
+ padding-top:5px;
+ margin-right:15px;
+ display:none;
+}
+
+#head input[type=text] {
+  padding: 5px 0px 5px 18px;
+  border:none;
+   border-radius:30px 0px 0px 30px;
+   font-size:30px;
+  background:linear-gradient(-178.5deg,#ddd,#fff);
+}
+
+#head .search-container button {
+ 
+  float: right;
+  padding: 12px 20px 14px 20px;
+  color:f1f1f1;
+  background:linear-gradient(-170deg,#777,#111,#000);
+  cursor: pointer;
+  border:none;
+   border-radius:0px 30px 30px 0px;
+}
+#head .search-container button i{
+color:#c1c1c1;
+font-size:20px;
+}
+
+#head .search-container button:hover {
+  background:linear-gradient(-170deg,#888,#222,#080808);
+}
+#head #search-toggle{
+float:right;
+font-size:30px;
+padding:10px;
+}
+
+#head #account-a{
+float:right;
+padding:10px 0px;
+}
+
+#head a{
+padding-right:10px;
+color:#9e9e9e;
+font-size:30px;
+decoration:none;
+cursor:pointer;
+transition:0.3s;
+}
+#head a:hover{
+color:#f1f1f1;
+}
+
 #head span{
 color:#c1c1c1;
 font-size:40px;
@@ -44,7 +112,7 @@ color:#f1f1f1;
   margin-left:-10px;
   height:100%;
   z-index: 1;
-  background-color: #111;
+  background-color: #181818;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 35px;
@@ -52,7 +120,7 @@ color:#f1f1f1;
 
 .sidenav a {
   padding-left:20px;
-  background:linear-gradient(90deg,#111,#111,#111);
+  background:linear-gradient(90deg,#181818,#181818,#181818);
   width:63%;
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -73,8 +141,12 @@ color:#f1f1f1;
 
 
 #main {
+  
   transition: margin-left .5s;
   padding: 16px;
+}
+#main .head{
+background:linear-gradient(90deg,#fff,wheat);
 }
 
 @media screen and (max-height: 450px) {
@@ -87,7 +159,19 @@ color:#f1f1f1;
 <body onresize="sizeTester()" onload="sizeTester()">
 <div id="head" style="">
 <span id="optional" onclick="toggleNav()">&#9776;</span>
-<span id="popup" onclick="sizeTester()">&#8285;</span>
+<span id="logo">web Logo</span>
+<div id="account-a">
+<a>Log In</a>
+<a>Sing In</a>
+</div>
+<span id="popup" onclick="">&#8285;</span>
+
+<div class="search-container" id="search-base">
+<input type="text" id="search-text" name="searchV" placeholder="seach">
+<button type="submit"><i class="fa fa-search"></i></button>
+</div>
+
+<span id="search-toggle" onclick="displaySearch()"><i class="fa fa-search"></i></span>
 </div>
 
 <div id="mySidenav" class="sidenav">
@@ -99,8 +183,7 @@ color:#f1f1f1;
 </div>
 
 <div id="main">
-  <h2 id="demo">Sidenav Push Example</h2>
-  <p>Click on the element below to open the side navigation menu, and push this content to the right.</p>
+  <div class="head"><h3>Trending</h3></div>
  
 
 </div>
@@ -131,17 +214,49 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
   nav=false;
 }
-
+function hideSearch(){
+	document.getElementById("search-base").style.display = "none";
+	document.getElementById("search-toggle").style.display = "block";
+}
+function showSearch(){
+	document.getElementById("search-toggle").style.display = "none";
+	document.getElementById("search-base").style.display = "block";
+}
+function displaySearch(){
+document.getElementById("logo").style.display = "none";
+showSearch();
+}
 function sizeTester(){
 	var w = window.innerWidth;
 	  var h = window.innerHeight;
-	  if(w>=550){
+	  document.getElementById("logo").style.display = "block";
+	  if(w>=1000){
+		  var t=w-490;
+		  showSearch();
+		  document.getElementById("account-a").style.display = "block";
 		  document.getElementById("optional").style.display = "none";
+		  document.getElementById("popup").style.display = "none";
 		  openNav();
-	  }else if(w<550){
+}
+	 else if(w>=600){
+		  var t=w-315;
+		  showSearch();
+		  document.getElementById("optional").style.display = "none";
+		  document.getElementById("popup").style.display = "block";
+		  document.getElementById("account-a").style.display = "none";
+		  
+		  openNav();
+	  }else if(w<600){
+		var t=w-115;
+	  
+		  hideSearch();
 		  document.getElementById("optional").style.display = "block";
+		  document.getElementById("popup").style.display = "block";
+		  document.getElementById("account-a").style.display = "none";
 		  closeNav();
 		  }
+document.getElementById("search-base").style.width = t+"px";
+	  document.getElementById("search-text").style.width = t-77+"px";
 }
 </script>
    
