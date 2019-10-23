@@ -15,6 +15,7 @@ margin-top:-1.5vh;
 margin-left:-10px;
 float:left;
 width:100%;
+
 background:#181818;
 padding:15px 15px 15px 15px;
 }
@@ -104,7 +105,7 @@ color:#f1f1f1;
 }
 
 .sidenav {
-  top:75px;
+  margin-top:75px;
   position:fixed;
   float:left;
   height: 100%;
@@ -183,8 +184,8 @@ background:linear-gradient(90deg,#fff,wheat);
 </div>
 
 <div id="main">
-  <div class="head"><h3>Trending</h3></div>
- 
+  <div class="head"><h3 id="sizev"></h3></div>
+ <p id="demo"></p>
 
 </div>
 <script>
@@ -230,6 +231,7 @@ function sizeTester(){
 	var w = window.innerWidth;
 	  var h = window.innerHeight;
 	  document.getElementById("logo").style.display = "block";
+	  document.getElementById("demo").innerHTML = "Width: " + w + "<br>Height: " + h;
 	  if(w>=1000){
 		  var t=w-490;
 		  showSearch();
@@ -255,6 +257,17 @@ function sizeTester(){
 		  document.getElementById("account-a").style.display = "none";
 		  closeNav();
 		  }
+	  if(h>850){
+		  
+		 	 
+			  document.getElementById("head").style.paddingTop = "3vh";
+			  document.getElementById("head").style.height = "7vh";
+		 
+	  }else if(h<=850){
+		 
+		  document.getElementById("head").style.paddingTop = "15px";
+		  document.getElementById("head").style.height = "60px";
+	  }
 document.getElementById("search-base").style.width = t+"px";
 	  document.getElementById("search-text").style.width = t-77+"px";
 }
