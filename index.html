@@ -169,7 +169,7 @@ background:linear-gradient(90deg,#fff,wheat);
 
 <div class="search-container" id="search-base">
 <input type="text" id="search-text" name="searchV" placeholder="seach">
-<button type="submit"><i class="fa fa-search"></i></button>
+<button type="submit"><i class="fa fa-search" id="search-btn"></i></button>
 </div>
 
 <span id="search-toggle" onclick="displaySearch()"><i class="fa fa-search"></i></span>
@@ -271,15 +271,51 @@ function sizeTester(){
 		  }
 	  
 document.getElementById("search-base").style.width = t+"px";
-	  document.getElementById("search-text").style.width = t-77+"px";
+	  document.getElementById("search-text").style.width = t-80+"px";
 if(h>800){
 	document.getElementById("mySidenav").style.marginTop=(h/10-10)+"px";
 	document.getElementById("head").style.height=(h/13-10)+"px";
+	data=data+"<hr/>"+(h/13-10);
+	document.getElementById("logo").style.fontSize = "40px";
+	
+if(h>1000){
+	
+	var sizing=(h/10-60);
+	document.getElementById("search-text").style.fontSize = sizing-8+"px";
+	document.getElementById("search-btn").style.fontSize = sizing-15+"px";
+	document.getElementById("logo").style.fontSize = sizing+"px";
+	document.getElementById("optional").style.fontSize = sizing+"px";
+	document.getElementById("search-toggle").style.fontSize = sizing+"px";
+	document.getElementById("popup").style.fontSize = sizing+"px";
+	document.getElementById("account-a").style.fontSize = sizing+"px";
+	
+	var newSize=document.getElementById("search-base").style.width;
+	t=t-(h/15);
+	
+	data=data+"<hr>"+newSize+":"+t;
+	document.getElementById("search-base").style.width=t+"px";
+	document.getElementById("search-text").style.width = t-(h/12)+"px";
 	document.getElementById("head").style.paddingTop=(h/13-40)+"px";
-	data=data+"<hr/>"+(h/10-10);
-	document.getElementById("demo").innerHTML=data;
+	document.getElementById("head").style.paddingBottom=(h/13-60)+"px";
+}else if(h<1100){
+	document.getElementById("head").style.paddingTop=(h/13-40)+"px";
+	var sizing=40;
+	document.getElementById("search-text").style.fontSize = sizing-8+"px";
+	document.getElementById("search-btn").style.fontSize = sizing-15+"px";
+	document.getElementById("logo").style.fontSize = sizing+"px";
+	document.getElementById("optional").style.fontSize = sizing+"px";
+	document.getElementById("search-toggle").style.fontSize = sizing+"px";
+	document.getElementById("popup").style.fontSize = sizing+"px";
+	document.getElementById("account-a").style.fontSize = sizing+"px";
+	document.getElementById("search-base").style.width = t+"px";
+	  document.getElementById("search-text").style.width = t-85+"px";
+}
+{
+	
+}
 }
 
+document.getElementById("demo").innerHTML=data;
 }
 </script>
    
