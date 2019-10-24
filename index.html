@@ -105,7 +105,7 @@ color:#f1f1f1;
 }
 
 .sidenav {
-  margin-top:75px;
+  margin-top:70px;
   position:fixed;
   float:left;
   height: 100%;
@@ -227,12 +227,23 @@ function displaySearch(){
 document.getElementById("logo").style.display = "none";
 showSearch();
 }
+
+function wRatio(w,h){
+	var val=w/h;
+	return val;
+}
+function hRatio(w,h){
+	var val=h/w;
+	return val;
+}
 function sizeTester(){
 	var w = window.innerWidth;
 	  var h = window.innerHeight;
 	  document.getElementById("logo").style.display = "block";
-	  document.getElementById("demo").innerHTML = "Width: " + w + "<br>Height: " + h;
-	  if(w>=1000){
+	  wr=wRatio(w,h);
+	  hr=hRatio(w,h);
+	  document.getElementById("demo").innerHTML=wr+" width ratio<br/>"+hr+" height ratio<br/>"+w+" : "+h;
+	  if(wr>=1.5){
 		  var t=w-490;
 		  showSearch();
 		  document.getElementById("account-a").style.display = "block";
@@ -240,7 +251,7 @@ function sizeTester(){
 		  document.getElementById("popup").style.display = "none";
 		  openNav();
 }
-	 else if(w>=600){
+	 else if(wr>=0.8){
 		  var t=w-315;
 		  showSearch();
 		  document.getElementById("optional").style.display = "none";
@@ -248,7 +259,7 @@ function sizeTester(){
 		  document.getElementById("account-a").style.display = "none";
 		  
 		  openNav();
-	  }else if(w<600){
+	  }else if(wr<0.8){
 		var t=w-115;
 	  
 		  hideSearch();
@@ -257,19 +268,11 @@ function sizeTester(){
 		  document.getElementById("account-a").style.display = "none";
 		  closeNav();
 		  }
-	  if(h>850){
-		  
-		 	 
-			  document.getElementById("head").style.paddingTop = "3vh";
-			  document.getElementById("head").style.height = "7vh";
-		 
-	  }else if(h<=850){
-		 
-		  document.getElementById("head").style.paddingTop = "15px";
-		  document.getElementById("head").style.height = "60px";
-	  }
+	  
 document.getElementById("search-base").style.width = t+"px";
 	  document.getElementById("search-text").style.width = t-77+"px";
+
+
 }
 </script>
    
