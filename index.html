@@ -237,12 +237,13 @@ function hRatio(w,h){
 	return val;
 }
 function sizeTester(){
+	var data="";
 	var w = window.innerWidth;
 	  var h = window.innerHeight;
 	  document.getElementById("logo").style.display = "block";
 	  wr=wRatio(w,h);
 	  hr=hRatio(w,h);
-	  document.getElementById("demo").innerHTML=wr+" width ratio<br/>"+hr+" height ratio<br/>"+w+" : "+h;
+	  data=wr+" width ratio<br/>"+hr+" height ratio<br/>"+w+" : "+h;
 	  if(wr>=1.5){
 		  var t=w-490;
 		  showSearch();
@@ -271,7 +272,13 @@ function sizeTester(){
 	  
 document.getElementById("search-base").style.width = t+"px";
 	  document.getElementById("search-text").style.width = t-77+"px";
-
+if(h>800){
+	document.getElementById("mySidenav").style.marginTop=(h/10-10)+"px";
+	document.getElementById("head").style.height=(h/13-10)+"px";
+	document.getElementById("head").style.paddingTop=(h/13-40)+"px";
+	data=data+"<hr/>"+(h/10-10);
+	document.getElementById("demo").innerHTML=data;
+}
 
 }
 </script>
