@@ -39,10 +39,6 @@ float:left;
 padding-left:2vh
 
 }
-	
-#mob-search{
-padding-right:2vh;
-}
 #s-btn{
 color:#c5c5c5;
 background:linear-gradient(-170deg,#777,#111,#000);
@@ -50,6 +46,10 @@ padding:2px 2vh;
 border-radius:0px 5vh 5vh 0px;
 border:none;
 float:left;
+}
+
+#mob-search{
+padding-right:2vh;
 }
 
 .icon-search i{
@@ -93,11 +93,41 @@ border:1px solid #fff;
 padding:0px 10px 0px 10px;
 
 }
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #181818;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 6vh;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 5vh;
+  text-decoration: none;
+  font-size: 4.5vh;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 </style>
 </head>
 <body onresize="sizeTester()" onload="sizeTester()">
 <div id="toolbar">
- <span class="h-items set-Left" id="silde-switch" onClick="headerResize()">&#9776;</span>
+ <span class="h-items set-Left" id="silde-switch" onClick="toggleNav()">&#9776;</span>
  <span class="h-items set-Left text" id="logo" onClick="headerResize()">Site Logo</span>
  <span class="h-items set-Right" id="popup" onClick="headerResize()">&#8285;</span>
  <span class="set-Right text" id="log">
@@ -112,10 +142,25 @@ padding:0px 10px 0px 10px;
 </form>
 </div>
 </div>
-<p id="demo">hello</p>
 
+<div id="mySidenav" class="sidenav">
+  <a class="side-l" href="#">About</a>
+  <a class="side-l" href="#">Services</a>
+  <a class="side-l" href="#">Clients</a>
+  <a class="side-l" href="#">Contact</a>
+</div>
+<div id="main">
+<p id="demo">hello</p>
+</div>
 <script>
 var h,w;
+var nav=true;
+function expandNav() {
+
+	  document.getElementById("mySidenav").style.width = h/3+"px";
+	  document.getElementById("main").style.marginLeft = h/3+"px";
+	  nav=true;
+	}
 
 function hRatio(){
 	return h/w;
@@ -143,7 +188,9 @@ function sizeTester(){
 	hTags[5].style.fontSize=headerFont;
 	document.getElementById("s-txt").style.fontSize=(h/20-4)+"px";
 	document.getElementById("s-btn").style.fontSize=(h/20-5)+"px";
-
+	
+	document.getElementById("mySidenav").style.marginTop = (h/15)+(h/20)-15+"px";
+	
 	document.getElementById("toolbar").style.paddingTop=(h/30)+"px";
 	document.getElementById("toolbar").style.paddingBottom=(h/30)+"px";
 	
@@ -167,7 +214,7 @@ function sizeTester(){
 		message=message+"<hr>"
 		sWidth=(fixedSize-logoSize-logSize);
 		document.getElementById("silde-switch").style.display="none";
-		
+		expandNav();
 		
 	}else if(Wide<1.55){
 		document.getElementById("popup").style.display="block";
@@ -180,11 +227,13 @@ function sizeTester(){
 			document.getElementById("mob-search").style.display="none";
 			document.getElementById("searcher").style.display="block";
 			sWidth=(fixedSize-logoSize-popSize-25);
+			expandNav();
 		}else if(Wide<0.85){
 			sWidth=(fixedSize-opSize-popSize);	
 			document.getElementById("silde-switch").style.display="block";
 			document.getElementById("searcher").style.display="none";
 			document.getElementById("mob-search").style.display="block";
+			closeNav();
 		}
 	}
 	document.getElementById("searcher").style.width=sWidth+"px";
@@ -204,6 +253,30 @@ function headerResize(){
 	var wide=document.getElementById("log").style.width;
 	alert(wide);
 }
+
+function openNav() {
+	  document.getElementById("mySidenav").style.width = h/3+"px";
+	  nav=true;
+	}
+
+	function closeNav() {
+	  document.getElementById("mySidenav").style.width = "0px";
+	  document.getElementById("main").style.marginLeft = "0px";
+	  nav=false;
+	}
+	
+	
+function toggleNav(){
+	if(nav){
+	closeNav();
+
+
+	}
+	else{
+	openNav();
+
+	}
+	}
 </script>
    
 </body>
