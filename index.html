@@ -1,283 +1,101 @@
 <!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>slide nav</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        
+    </head>
+    <body>
+        <nav class="navbar nav-bg navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header navbar-inverse">
+          <button type="button" class="navbar-toggle collapsed" id="navTog" style="float: left;margin-left: 15px;">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="glyphicon glyphicon-user" style="color:#fff;"></span>
+            
+          </button>
+                    <button class=" search-toggle" style="border: none;">
+                        <span class=" glyphicon glyphicon-search"></span>
+                    </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+                <form class="search-box" action="get" target="#">
+                    
+                    <input type="text" placeholder="search" name='ser'>
+                    <button type="submit" class="" style="">
+                        <span class=" glyphicon glyphicon-search"></span>
+                    </button>
+                </form>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <div class="navbar-form navbar-right" style="padding-left:0px;">
+                        <a class="form-group btn blank-btn"><span class="glyphicon glyphicon-user"></span> User</a>  
+                        <a class="form-group btn blank-btn"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a>  
+                        <a class="form-group btn blank-btn"><span class="glyphicon glyphicon-log-out"></span> Log Out</a>  
+                    </div>
+                </div>
+               
+               </div>
+        </nav>
+        <div class="slidable" id="sidenav">
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+        </div>
+        
+        <div id="base">
+       
+            <div class="card-container">
+                <center>  
+      <div class="fix-card">
+          lovely
+      </div>
+      <div class="fix-card">
+          lovely
+      </div>
+      <div class="fix-card">
+          lovely
+      </div>
+      <div class="fix-card">
+          lovely
+      </div>
+      <div class="fix-card">
+          lovely
+      </div>
+               </center>
+            </div>
+    
 
-<style>
-* {box-sizing: border-box;}
-body {
-  font-family: "Lato", sans-serif;
-}
-#popup{
-margin-top:0.5vh;
-}
-#toolbar{
-margin-top:-7vh;
-margin-left:-10px;
-padding:15px 15px 15px 15px;
-float:left;
-background:#181818;
-}
-.h-searcher{
-color:#000;
-font-size:24px;
-text-decoration:none;
-padding-top:3px;
-margin-left:0.4vw;
-margin-right:0.4vw;
-
-
-}
-#s-txt{
-font-weight:bolder;
-color:#181818;
-background:linear-gradient(-178.5deg,#ddd,#fff);
-border:none;
-border-radius:5vh 0px 0px 5vh;
-float:left;
-padding-left:2vh
-
-}
-#s-btn{
-color:#c5c5c5;
-background:linear-gradient(-170deg,#777,#111,#000);
-padding:2px 2vh;
-border-radius:0px 5vh 5vh 0px;
-border:none;
-float:left;
-}
-
-#mob-search{
-padding-right:2vh;
-}
-
-.icon-search i{
- display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-search i:before{
-content: "\f002";
-}
-
-
-.h-items{
-color:#aaa;
-font-size:24px;
-text-decoration:none;
-margin-left:0.4vw;
-margin-right:0.4vw;
-cursor:pointer;
-transition:0.3s;
-}
-.h-items:hover{
-color:#e5e5e5;
-}
-
-.set-Left{
-float:left;
-}
-.set-Right{
-float:right;
-}
-.text{
-margin-top:0.8vh;
-}
-#logo{
-border:1px solid #fff;
-padding:0px 10px 0px 10px;
-
-}
-
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #181818;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 6vh;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 5vh;
-  text-decoration: none;
-  font-size: 4.5vh;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
-</head>
-<body onresize="sizeTester()" onload="sizeTester()">
-<div id="toolbar">
- <span class="h-items set-Left" id="silde-switch" onClick="toggleNav()">&#9776;</span>
- <span class="h-items set-Left text" id="logo" onClick="headerResize()">Site Logo</span>
- <span class="h-items set-Right" id="popup" onClick="headerResize()">&#8285;</span>
- <span class="set-Right text" id="log">
- <a class="h-items" href="#">Log In</a>
- <a class="h-items" href="#">Sign In</a>
- </span>
-<span class="icon-search h-items set-Right" onclick="searchOn()" id="mob-search" style="margin-top:0.8vh"><i></i></span>
-<div class="set-Right h-searcher text" id="searcher" style="">
-<form method="get" action="#">
-<input id="s-txt" type="text" placeholder="Search..."/>
-<button class="icon-search" id="s-btn" type="submit"><i></i></button>
-</form>
-</div>
-</div>
-
-<div id="mySidenav" class="sidenav">
-  <a class="side-l" href="#">About</a>
-  <a class="side-l" href="#">Services</a>
-  <a class="side-l" href="#">Clients</a>
-  <a class="side-l" href="#">Contact</a>
-</div>
-<div id="main">
-<p id="demo">hello</p>
-</div>
-<script>
-var h,w;
-var nav=true;
-function expandNav() {
-
-	  document.getElementById("mySidenav").style.width = h/3+"px";
-	  document.getElementById("main").style.marginLeft = h/3+"px";
-	  nav=true;
-	}
-
-function hRatio(){
-	return h/w;
-}
-function wRatio(){
-	return w/h;
-}
-
-function sizeTester(){
-	w = window.innerWidth;
-	h = window.innerHeight;	
-	var headerFont=h/20+"px";
-	var message=w+":"+h;
-	document.getElementById("logo").style.display="block";	
-	
-	document.getElementById("toolbar").style.width=w+2+"px";
-	
-	
-	var hTags=document.getElementsByClassName("h-items");
-	hTags[0].style.fontSize=headerFont;
-	hTags[1].style.fontSize=headerFont;
-	hTags[2].style.fontSize=headerFont;
-	hTags[3].style.fontSize=headerFont;
-	hTags[4].style.fontSize=headerFont;
-	hTags[5].style.fontSize=headerFont;
-	document.getElementById("s-txt").style.fontSize=(h/20-4)+"px";
-	document.getElementById("s-btn").style.fontSize=(h/20-5)+"px";
-	
-	document.getElementById("mySidenav").style.marginTop = (h/15)+(h/20)-15+"px";
-	
-	document.getElementById("toolbar").style.paddingTop=(h/30)+"px";
-	document.getElementById("toolbar").style.paddingBottom=(h/30)+"px";
-	
-	high=hRatio();
-	Wide=wRatio();
-	message=message+"<br>"+Wide;
-	
-	var logoSize=(h/20*9)/2.13;
-	var logSize=(h/20*15)/2.13;
-	var popSize=(h/20*1)/2.13;
-	var opSize=(h/20*1)/2.13;
-	var fixedSize=w-70-(w/250);
-	var sWidth=0;
-	message=message+"<br>"+sWidth;
-
-	if(Wide>1.55){
-		
-		document.getElementById("popup").style.display="none";
-		document.getElementById("log").style.display="block";
-		document.getElementById("mob-search").style.display="none";
-		message=message+"<hr>"
-		sWidth=(fixedSize-logoSize-logSize);
-		document.getElementById("silde-switch").style.display="none";
-		expandNav();
-		
-	}else if(Wide<1.55){
-		document.getElementById("popup").style.display="block";
-		document.getElementById("log").style.display="none";
-		//document.getElementById("log").style.display="block";
-		
-		if(Wide>0.85){
-			document.getElementById("silde-switch").style.display="none";
-			message=message+"<hr>"
-			document.getElementById("mob-search").style.display="none";
-			document.getElementById("searcher").style.display="block";
-			sWidth=(fixedSize-logoSize-popSize-25);
-			expandNav();
-		}else if(Wide<0.85){
-			sWidth=(fixedSize-opSize-popSize);	
-			document.getElementById("silde-switch").style.display="block";
-			document.getElementById("searcher").style.display="none";
-			document.getElementById("mob-search").style.display="block";
-			closeNav();
-		}
-	}
-	document.getElementById("searcher").style.width=sWidth+"px";
-	var buttonW=h/1000;
-	tWidth=(sWidth-h/20)-h/20-5;
-	document.getElementById("s-txt").style.width=tWidth+"px";
-	document.getElementById("demo").innerHTML=message;
-	document.getElementById("demo").style.fontSize=headerFont;
-}
-
-function searchOn(){
-	document.getElementById("searcher").style.display="block";
-	document.getElementById("mob-search").style.display="none";
-	document.getElementById("logo").style.display="none";
-}
-function headerResize(){
-	var wide=document.getElementById("log").style.width;
-	alert(wide);
-}
-
-function openNav() {
-	  document.getElementById("mySidenav").style.width = h/3+"px";
-	  nav=true;
-	}
-
-	function closeNav() {
-	  document.getElementById("mySidenav").style.width = "0px";
-	  document.getElementById("main").style.marginLeft = "0px";
-	  nav=false;
-	}
-	
-	
-function toggleNav(){
-	if(nav){
-	closeNav();
-
-
-	}
-	else{
-	openNav();
-
-	}
-	}
-</script>
-   
-</body>
-</html> 
+     
+    </div> 
+        <script src="js/googleapis/jQuery-1.11.2.js" type="text/javascript"></script>
+         <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="js/main.js"></script>
+      
+    </body>
+</html>
