@@ -96,6 +96,7 @@ float: left;
   content: " ";
 }
 
+
 @media (max-width:604px){
 
     .collapsed-search {
@@ -136,8 +137,8 @@ display: none;
     margin-left:-4px;
     background: linear-gradient(-173deg,#888,#444,#282828);
 }
+.collapsed-search button:hover ,#rev:hover{color:#ccc;}
 }
-
 
 @media (min-width:605px){
     .search-toggle{display: none;}
@@ -170,14 +171,13 @@ margin-right: 5%;
     margin-left:-4px;
     background: linear-gradient(-173deg,#888,#444,#282828);
 }
+.collapsed-search button,#rev:hover{color:#ccc;}
 }
-
 
 @media (min-width: 768px){
     .nav-bg{background:linear-gradient(#3c3c3c,#222);}
     .collapsed-search{display: none;}
 }
-
 
 @media (max-width: 767px) {
 .search-box{display: none;}
