@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
    <head>
         <meta charset="utf-8">
@@ -27,29 +22,39 @@ and open the template in the editor.
         <nav class="navbar nav-bg navbar-fixed-top" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header navbar-inverse">
+          
           <button type="button" class="navbar-toggle collapsed" id="navTog" style="float: left;margin-left: 15px;">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="glyphicon glyphicon-user" style="color:#fff;"></span>
-            
           </button>
-                    <button class=" search-toggle" style="border: none;">
-                        <span class=" glyphicon glyphicon-search"></span>
-                    </button>
+          <button class=" search-toggle" style="border: none;">
+            <span class=" glyphicon glyphicon-search"></span>
+          </button>
+                    
+          <form class="collapsed-search" action="get" target="#">
+            <button id="rev"><span class="glyphicon glyphicon-arrow-left"></span></button>
+              <input type="text" placeholder="search" name='ser'>
+            <button type="submit" class="" style="">
+                <span class=" glyphicon glyphicon-search"></span>
+                
+            </button>
+          </form>
           <a class="navbar-brand" href="#">Project name</a>
         </div>
-                <form class="search-box" action="get" target="#">
-                    
+               
+                <form id="searchbox" class="search-box" action="get" target="#">
                     <input type="text" placeholder="search" name='ser'>
                     <button type="submit" class="" style="">
                         <span class=" glyphicon glyphicon-search"></span>
                     </button>
                 </form>
+               
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right" style="padding-left:0px;">
                         <a class="form-group btn blank-btn"><span class="glyphicon glyphicon-user"></span> User</a>  
