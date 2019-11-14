@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+var searchBoxMaargins=0;
     var openSlider=false;
     
     function openSide(widthable){
@@ -16,9 +16,11 @@ $(document).ready(function(){
     }
     
     var width=window.innerWidth;
-  var height=window.innerHeight; 
+  var height=window.innerHeight;
+  searchBoxMaargins=(width-768)/4;
+  $("#searchbox").css("margin-left",searchBoxMaargins);
     if(width>768){
-        
+       
        openSide(200);
     }
     else
@@ -39,7 +41,9 @@ $(document).ready(function(){
     $(window).resize(function(){
   width=window.innerWidth;
   height=window.innerHeight; 
-    if(width>768){
+     searchBoxMaargins=(width-768)/4;
+  $("#searchbox").css("margin-left",searchBoxMaargins);
+        if(width>768){
        openSide(200);
     }
     else
@@ -57,8 +61,4 @@ $(document).ready(function(){
         console.log(e);
     }
     });
- 
-  
-  
-  
 });
