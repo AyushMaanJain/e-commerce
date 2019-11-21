@@ -1,0 +1,92 @@
+
+.head {
+float:left;
+width:100%;
+padding:15px 20px;
+margin:-10px;
+position: fixed;
+}
+
+.Pname {
+float: left;
+font-size: 25px;
+}
+
+.options {
+margin-right:10px; 
+float: right;
+font-size: 20px;
+}
+.options a span{
+padding:0px 20px 0px 5px; 
+}
+.slideToggle{
+    padding:0px 8px 3px 8px;
+    margin-right: 20px;
+    float: left;
+    font-size: 20px;
+}
+.popup {
+    padding:7px 10px;
+    margin-right: 35px;
+    float: right;
+    font-size: 40px;
+    left:0;
+}
+
+.slidenav {
+  height: 100%; /* 100% Full-height */
+  width: 250px; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 55px; /* Stay at the top */
+  left: 0; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px; /* Place content 60px from the top */
+  transition: 0.5s;
+}
+.slidenav a{
+    padding: 8px 8px 8px 32px;
+  display: block;
+  transition: 0.3s;
+}
+.slidenav span{
+
+padding: 0px 0px 8px 0px;
+}
+.home{
+    margin-left:200px;
+}
+@media (max-width:768px){
+    .options{
+        opacity:0;
+        transition-delay:0.5s;
+        display: none;
+        padding: 10px;
+        margin-left:-20px;
+        float:right;
+        position:fixed;
+        margin-top: 40px;
+        width: 100%;
+        height:100%;
+    }
+    .popbase{
+        overflow: hidden;
+        padding:5px 10px 10px 10px;
+        float: right;
+        width: 110px;
+        
+        transition: 0.5s;
+        margin-right:40px;
+    }
+    .options a{
+        
+        transition:0.3s;
+        padding:10px 2px;
+        width: 100%;
+        border-bottom:1px solid gray;
+        
+    }
+    .slidenav{width: 0px;}
+}
+

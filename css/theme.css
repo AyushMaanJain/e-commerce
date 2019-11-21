@@ -1,0 +1,41 @@
+.head{background:#222;}
+.Pname{color: #ccc;}
+.options a{color: #bbb;}
+.slideToggle{
+    color: #ccc;
+    border:none;
+    border-radius: 5px;
+    box-shadow:0px 0px 2px;
+    background: none;
+}
+.popup{
+     color: #ccc;
+    border:none;
+    background: none;
+    border-radius: 5px;
+    box-shadow:0px 0px 2px;
+}
+.slidenav{
+    background: #222;
+}
+.slidenav a{
+    color: #818181;
+    text-decoration: none;
+  font-size: 25px;
+}
+.slidenav span{
+    color:transparent;
+}
+.home{
+    background: pink;
+}
+@media (max-width:768px){
+    .popbase{
+        border: solid;
+        color:#fff;
+        border-width:15px 10px 0px 0px;
+        border-color: #fff #222 transparent transparent;
+        background: #222;
+        
+    }
+}
