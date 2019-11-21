@@ -87,6 +87,6 @@ padding: 0px 0px 8px 0px;
         border-bottom:1px solid gray;
         
     }
-    .slidenav{width: 0px;}
+    .slidenav[expand="false"]{width: 0px;}
+    .slidenav[expand="true"]{width: 250px;}
 }
-
