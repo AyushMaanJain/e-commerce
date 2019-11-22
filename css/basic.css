@@ -1,48 +1,60 @@
-
 .head {
 float:left;
 width:100%;
 padding:15px 20px;
-margin:-10px;
+top:0;
+left: 0;
 position: fixed;
 }
-
 .Pname {
+margin-left:35px;
 float: left;
 font-size: 25px;
 }
-
 .options {
 margin-right:10px; 
 float: right;
 font-size: 20px;
 }
+.popbase a{
+    display:  inline-block;
+}
 .options a span{
 padding:0px 20px 0px 5px; 
 }
 .slideToggle{
+    display: none;
     padding:0px 8px 3px 8px;
     margin-right: 20px;
     float: left;
     font-size: 20px;
 }
-.popup {
+.popup{
+    display: none;
     padding:7px 10px;
     margin-right: 35px;
     float: right;
     font-size: 40px;
     left:0;
 }
-
+.searchToggle{
+    display: none;
+    padding:7px 10px;
+    margin-right: 10px;
+    float: right;
+    font-size: 40px;
+    left:0;
+}
 .slidenav {
-  height: 100%; /* 100% Full-height */
+  height: 100%;
   width: 250px; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
-  top: 55px; /* Stay at the top */
+  margin-top: 50px; /* Stay at the top */
   left: 0; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px; /* Place content 60px from the top */
+  padding-top: 30px; /* Place content 60px from the top */
+ padding-bottom: 100px;/* Place content 60px from the top */
   transition: 0.5s;
 }
 .slidenav a{
@@ -55,9 +67,40 @@ padding:0px 20px 0px 5px;
 padding: 0px 0px 8px 0px;
 }
 .home{
-    margin-left:200px;
+    left:0;
+    top:0;
+    position: absolute;
+    margin-left:250px;
+    margin-top:60px;
 }
+.searchBox input{
+    padding-left:5px;
+    width:87%;
+}
+.searchBox {
+float: right;
+padding:10px 15px;
+width: 100%;
+}
+.searchCon{
+    float: right;
+    margin-top: -8px;
+    margin-right: 35px;
+    padding: 0;
+    width: 30%;
+}
+.searchCon .fa-arrow-left{
+    display:none;
+    background: #222;
+    margin-top: 8px;
+}
+
 @media (max-width:768px){
+    
+    .slideToggle,.popup,.searchToggle{
+        display: block;
+    }
+    .Pname{margin-left: 0px;}
     .options{
         
         transition-delay:0.5s;
@@ -76,6 +119,32 @@ padding: 0px 0px 8px 0px;
     .options[display="block"]{
         opacity:1;
         display:block;}
+    .searchBox  {
+    float: left;
+    width: 80%;
+
+    }
+    .searchCon .fa-arrow-left{
+        float:left;
+        display: block;
+        width:30px;
+        background:none;
+        color: #ddd;
+        font-size:25px;
+    }
+    .searchCon{
+    padding:15px;
+    background: #222;
+    left:0; 
+    top:0; 
+    position: fixed;
+    width: 100%;
+    }
+    
+    .searchCon[display="none"]{
+        display:none;}
+    .searchCon[display="block"]{
+        display:block;}
     .popbase{
         overflow: hidden;
         padding:5px 10px 10px 10px;
@@ -93,6 +162,17 @@ padding: 0px 0px 8px 0px;
         border-bottom:1px solid gray;
         
     }
+    .home{
+        margin-left: 0px;
+        left:0;}
     .slidenav[expand="false"]{width: 0px;}
-    .slidenav[expand="true"]{width: 250px;}
+    .slidenav[expand="true"]{  
+        width: 90%;
+    }
+    .slidenav a{
+        padding: 8px 0px;
+        width:100%;
+        text-align: center;
+    }
+    
 }
