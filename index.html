@@ -16,15 +16,24 @@ and open the template in the editor.
     <body>
         <nav class="head">
             <Button class="slideToggle">&#9776;</Button>
-        <span class="Pname"><a>Ailmax</a></span>
+        <span class="Pname"><a href="#">Ailmax</a></span>
         <nav class="options" display='none'>
             <nav class="popbase">
-            <a class="fa fa-sign-in"><span>sign in</span></a>
-            <a class="fa fa-user-circle-o"><span>sign up</span></a>
+                <a href="#" class="fa fa-sign-in"><span style="">sign in</span></a>
+            <a href="#" class="fa fa-user-circle-o"><span>sign up</span></a>
             </nav>
         </nav>
         <button class="popup fa fa-user"></button>
+        <button class="searchToggle fa fa-search"></button>
+        <div class="searchCon" display="none">
+            <span class="back fa fa-arrow-left"></span>
+            <form method="get" action="filter" class="searchBox">
+            <span class="fa fa-search"></span>
+            <input type="text" name="search" placeholder="search"/>
+        </form>
+        </div>
         </nav>
+       
         <div class="slidenav" expand="false">
             <span>Price </span>
             <a href="#">Free</a>
@@ -32,9 +41,15 @@ and open the template in the editor.
             <span>Value  </span>
             <a href="#">Trending</a>
             <a href="#">Latest</a>
+           
             <span>Uses </span>
             <a href="#">Anti Virus</a>
             <a href="#">Operating System</a>
+            <a href="#">Developement</a>
+            <a href="#">3D CAD</a>
+            <a href="#">Graphic Design</a>
+            <a href="#">Data/Financing</a>
+            <a href="#">Others</a>
             
         </div>
         <div class="home"></div>
