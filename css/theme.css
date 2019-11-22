@@ -1,19 +1,24 @@
 .head{background:#222;}
-.Pname{color: #ccc;}
+.Pname a{color: #ccc; text-decoration:none;}
 .options a{color: #bbb;}
-.slideToggle{
+.slideToggle,.popup,.searchToggle{
     color: #ccc;
     border:none;
     border-radius: 5px;
     box-shadow:0px 0px 2px;
-    background: none;
+    background: #282828;
 }
-.popup{
-     color: #ccc;
-    border:none;
-    background: none;
-    border-radius: 5px;
-    box-shadow:0px 0px 2px;
+.searchBox{
+background:#191919;
+color:#ddd;
+}
+.searchBox input{
+    font-size: 15px;
+    background: transparent;
+    border: none;
+    color: #ddd;}
+.popbase a{
+    text-decoration: none;
 }
 .slidenav{
     background: #222;
@@ -29,11 +34,13 @@
 .home{
     background: pink;
 }
+input:focus{outline: none;}
 @media (max-width:768px){
     .popbase{
         border: solid;
         color:#fff;
-        border-width:15px 10px 0px 0px;
+        border-width:8px 8px 0px 0px;
+        border-radius:0px 0px 0px 0px;
         border-color: #fff #222 transparent transparent;
         background: #222;
         
