@@ -69,9 +69,10 @@ padding: 0px 0px 8px 0px;
 .home{
     left:0;
     top:0;
-    position: absolute;
-    margin-left:250px;
-    margin-top:60px;
+    position: static;
+    padding-top: 60px;
+    margin-left:242px;
+    
 }
 .searchBox input{
     padding-left:5px;
@@ -93,6 +94,48 @@ width: 100%;
     display:none;
     background: #222;
     margin-top: 8px;
+}
+.carousel_container {
+width: calc(100%-100px);
+height:auto;
+margin:50px;
+}
+.image {
+float:left;
+width:56%;
+height: 100%;
+}
+.carousel_picture{
+float: left;
+border:0x #555 solid;
+background:#fff;
+height:100%;
+transition:0.3s;
+}
+.carousel_picture[active="true"]{
+    width:100%;
+}
+.carousel_picture[active="false"]{
+    width:0%;
+}
+.carousel_picture img{
+    width: 100%;
+    height:100%;
+}
+.desc {
+float:left;
+width:44%;
+height: 100%;
+transition: 0.4s;
+background: #280069;
+}
+
+@media(max-width:992px){
+    .image,.desc{width: 100%;}
+    .desc{height:auto;}
+    .carousel_container{
+    margin-bottom:280px;
+    }
 }
 
 @media (max-width:768px){
@@ -122,7 +165,6 @@ width: 100%;
     .searchBox  {
     float: left;
     width: 80%;
-
     }
     .searchCon .fa-arrow-left{
         float:left;
@@ -163,7 +205,7 @@ width: 100%;
         
     }
     .home{
-        margin-left: 0px;
+        margin-left: -8px;
         left:0;}
     .slidenav[expand="false"]{width: 0px;}
     .slidenav[expand="true"]{  
@@ -175,4 +217,49 @@ width: 100%;
         text-align: center;
     }
     
+}
+
+
+.arrows{
+    padding:20px;
+    color: #ddd;
+    -khtml-user-select: none;
+    -moz-user-select:none;
+    -webkit-user-select: none;
+}
+.arrows span:hover{
+    color:#fff;
+    text-shadow:0px 0px 3px #ddd;
+}
+.arrows span{
+    font-size:25px;
+    padding-right:10px;
+}
+.carousel_text{
+    transition: 0.3s;
+}
+.carousel_text[active="true"]{
+    height:auto;
+    padding:20px 20px;
+    margin-bottom:20px;
+    opacity:1;
+}
+.carousel_text[active="false"]{
+    height:0px;
+    overflow: hidden;
+    opacity:0;
+    padding: 0px;
+margin-bottom:0px;
+}
+
+.carousel_text h1{
+    margin:0px 0px;
+}
+.carousel_text a{
+    font-weight:bold;
+    text-decoration: none;
+    
+}
+.carousel_text p{
+    font-size:20px;
 }
