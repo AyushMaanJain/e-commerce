@@ -1,6 +1,10 @@
 .head{background:#222;}
 .Pname a{color: #ccc; text-decoration:none;}
+.Pname a:hover{color: #fff; text-shadow:0px 0px 4px #888 ;}
 .options a{color: #bbb;}
+.options a:hover{color: #fff;
+text-shadow:0px 0px 2px #fff;
+}
 .slideToggle,.popup,.searchToggle{
     color: #ccc;
     border:none;
@@ -9,6 +13,7 @@
     background: #282828;
 }
 .searchBox{
+border-radius:5px;
 background:#191919;
 color:#ddd;
 }
@@ -16,17 +21,25 @@ color:#ddd;
     font-size: 15px;
     background: transparent;
     border: none;
-    color: #ddd;}
+    color: #ddd;
+    font-weight: 540;
+}
 .popbase a{
     text-decoration: none;
 }
 .slidenav{
     background: #222;
 }
+.slidenav a:hover{
+    color: #ddd;
+    padding-left:40px;
+}
 .slidenav a{
+    padding-left:0px;
     color: #818181;
     text-decoration: none;
   font-size: 25px;
+  transition:0.3s;
 }
 .slidenav span{
     color:transparent;
@@ -35,6 +48,10 @@ color:#ddd;
     background: pink;
 }
 input:focus{outline: none;}
+.carousel_text *{
+     font-family: sans-serif;
+    color:#fff;
+}
 @media (max-width:768px){
     .popbase{
         border: solid;
