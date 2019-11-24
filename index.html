@@ -9,6 +9,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="css/theme.css" type="text/css">
         <link rel="stylesheet" href="css/basic.css" type="text/css">
         <link rel="stylesheet" href="fonts/fonts setup.css" type="text/css"/>
+        <link rel="stylesheet" href="Pic/PictureStyling.css" type="text/css"/>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +30,7 @@ and open the template in the editor.
             <span class="back fa fa-arrow-left"></span>
             <form method="get" action="filter" class="searchBox">
             <span class="fa fa-search"></span>
-            <input type="text" name="search" placeholder="search"/>
+            <input type="text" name="search" placeholder="search..." autocomplete="off"/>
         </form>
         </div>
         </nav>
@@ -52,7 +53,44 @@ and open the template in the editor.
             <a href="#">Others</a>
             
         </div>
-        <div class="home"></div>
+        <div class="home">
+            <div class="carousel_container">
+                <div class="image">
+                    <div id="picA" active="true" class="carousel_picture">
+                        <img src="Pic/Koding.png" style="width: 100%;height: 100%;">
+                    </div>
+                    <div id="picB" active="false" class="carousel_picture">
+                        <img src="Pic/haudini.png" style="width: 100%">
+                    </div>
+                    <div id="picC" active="false" class="carousel_picture">
+                         <img src="Pic/windows10.jpg" style="width: 100%">
+                    </div>
+                </div>
+                <div class="desc">
+                <div class="fa arrows">
+                    <span id="shiftL" class="fa-arrow-left"></span>
+                    <span id="shiftR" class="fa-arrow-right"></span>
+                </div>
+                    <div id="textA" active="true" class="carousel_text">
+                        <h1>Koding</h1>
+                        <p>Developement Enviorment automation platform</p>
+                        <a href="#">See more information &rarr;</a>
+                    </div>
+                    <div id="textB" active="false" class="carousel_text">
+                        <h1>houdini</h1>
+                        <p>A 3D animation software application</p>
+                        <a href="#">See more information &rarr;</a>
+                    </div>
+                    <div id="textC" active="false" class="carousel_text">
+                        <h1>Windows10</h1>
+                        <p>series of personal computer operating systems</p>
+                        <a href="#">See more information &rarr;</a>
+                    </div>
+            </div>
+            </div>
+            
+            <div style="width: 100%;height: 100px;background: #ff0;"></div>
+        </div>
         <script src="Js/jquery-3.4.1.js"></script>
         <script src="Js/main.js"></script>
     </body>
