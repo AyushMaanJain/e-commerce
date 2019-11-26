@@ -1,65 +1,108 @@
-.head{background:#222;}
-.Pname a{color: #ccc; text-decoration:none;}
-.Pname a:hover{color: #fff; text-shadow:0px 0px 4px #888 ;}
-.options a{color: #bbb;}
+.head{
+    background:#93c;}
+.Pname a{color: #fff; text-decoration:none;}
+.Pname a:hover{color: #fff; text-shadow:0px 0px 4px #bbb ;}
+.options a{
+color: #fff;
+}
 .options a:hover{color: #fff;
-text-shadow:0px 0px 2px #fff;
+text-shadow:0px 0px 2px #bbb;
 }
 .slideToggle,.popup,.searchToggle{
-    color: #ccc;
+    color: #fff;
     border:none;
     border-radius: 5px;
-    box-shadow:0px 0px 2px;
-    background: #282828;
+    box-shadow:0px 0px 3px;
+    background: transparent;
 }
 .searchBox{
 border-radius:5px;
-background:#191919;
-color:#ddd;
+background:#639;
+color:#fff;
+}
+.searchBox input::placeholder{
+    color:#bbb ;
 }
 .searchBox input{
     font-size: 15px;
     background: transparent;
     border: none;
-    color: #ddd;
-    font-weight: 540;
+    color: #fff;
+    font-weight: 600;
 }
 .popbase a{
     text-decoration: none;
 }
 .slidenav{
-    background: #222;
+    background: #93c;
 }
 .slidenav a:hover{
-    color: #ddd;
+    color: #fff;
     padding-left:40px;
+    text-shadow:-8px -4px 3px #222;
 }
 .slidenav a{
     padding-left:0px;
-    color: #818181;
+    color: #fff;
+    font-family: sans-serif;
     text-decoration: none;
   font-size: 25px;
   transition:0.3s;
+  
+}
+.carousel_picture{
+background:#fff;
+}
+.desc{
+background: #280069;
 }
 .slidenav span{
     color:transparent;
 }
 .home{
-    background: pink;
+    background:#505;
 }
 input:focus{outline: none;}
 .carousel_text *{
      font-family: sans-serif;
     color:#fff;
 }
+.horizontal-list{
+    background: #505;
+    color: #fff;
+    
+}
+
+.arrows{
+    color: #ddd;
+}
+.arrows span:hover{
+    color:#fff;
+    text-shadow:0px 0px 3px #ddd;
+}
+
+.card{
+    background: #506;
+    box-shadow:1px 1px 4px #5cc;
+}
+.card:hover{
+    box-shadow:0px 0px 8px #5ff;
+}
+
 @media (max-width:768px){
     .popbase{
         border: solid;
         color:#fff;
         border-width:8px 8px 0px 0px;
         border-radius:0px 0px 0px 0px;
-        border-color: #fff #222 transparent transparent;
-        background: #222;
+        border-color: #fff #93c transparent transparent;
+        background: #93c;
         
+    }
+    .searchCon .fa-arrow-left{
+        background:none;
+        color: #fff;}
+    .searchCon{
+        background: #93c;
     }
 }

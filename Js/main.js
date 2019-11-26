@@ -39,6 +39,8 @@ else if(w<=768){
       $("#textC").attr("active","true");
       $("#picA").attr("active","false");
       $("#picC").attr("active","true");
+      $("#port1").attr("active","false");
+      $("#port3").attr("active","true");
       $(".desc").css("background","#00f");
       slide=3;
   // alert(slide);
@@ -48,6 +50,8 @@ else if(w<=768){
       $("#textB").attr("active","true");
       $("#picC").attr("active","false");
       $("#picB").attr("active","true");
+      $("#port3").attr("active","false");
+      $("#port2").attr("active","true");
       $(".desc").css("background","#000");
        slide=2;
       //alert(slide);
@@ -57,6 +61,8 @@ else if(w<=768){
       $("#textA").attr("active","true");
       $("#picB").attr("active","false");
       $("#picA").attr("active","true");
+      $("#port2").attr("active","false");
+      $("#port1").attr("active","true");
       $(".desc").css("background","#207");
       slide=1;
       //alert(slide);
@@ -68,6 +74,8 @@ else if(w<=768){
       $("#textB").attr("active","true");
       $("#picA").attr("active","false");
       $("#picB").attr("active","true");
+      $("#port1").attr("active","false");
+      $("#port2").attr("active","true");
       $(".desc").css("background","#000");
       slide=2;
   // alert(slide);
@@ -77,6 +85,8 @@ else if(w<=768){
       $("#textA").attr("active","true");
       $("#picC").attr("active","false");
       $("#picA").attr("active","true");
+      $("#port3").attr("active","false");
+      $("#port1").attr("active","true");
       $(".desc").css("background","#207");
       slide=1;
       //alert(slide);
@@ -86,6 +96,8 @@ else if(w<=768){
       $("#textC").attr("active","true");
       $("#picB").attr("active","false");
       $("#picC").attr("active","true");
+      $("#port2").attr("active","false");
+      $("#port3").attr("active","true");
       $(".desc").css("background","#00f");
       slide=3;
       //alert(slide);
