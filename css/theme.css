@@ -94,7 +94,7 @@ input:focus{outline: none;}
         color:#fff;
         border-width:8px 8px 0px 0px;
         border-radius:0px 0px 0px 0px;
-        border-color: #fff #93c transparent transparent;
+        border-color: #505 #93c transparent transparent;
         background: #93c;
         
     }
