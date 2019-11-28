@@ -68,7 +68,7 @@ input:focus{outline: none;}
     color:#fff;
 }
 .horizontal-list{
-    background: #505;
+    background: transparent;
     color: #fff;
     
 }
@@ -81,14 +81,13 @@ input:focus{outline: none;}
     text-shadow:0px 0px 3px #ddd;
 }
 
-.card{
-    background: #506;
-    box-shadow:1px 1px 4px #5cc;
+.cardA,.cardB,.cardC,.cardD,.cardE{
+    box-shadow: 1px 1px 5px;
+    border-radius:7px;
 }
-.card:hover{
-    box-shadow:0px 0px 8px #5ff;
+.card img{
+    border-radius:7px;
 }
-
 @media (max-width:768px){
     .popbase{
         border: solid;

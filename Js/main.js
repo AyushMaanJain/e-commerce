@@ -1,5 +1,6 @@
 $(document).ready(function(){
     var slide=1;
+    var sideOpen=false;
     var w=window.innerWidth;
     
   $(".popup").focus(function(){
@@ -9,11 +10,22 @@ $(document).ready(function(){
     $(".options").attr("display","none");
    
   });
-  $(".slideToggle").focus(function(){
-     $(".slidenav").attr("expand","true"); 
+  $(".slideToggle").click(function(){
+      if(sideOpen){
+        $(".slidenav").attr("expand","false");
+        $(".slideToggle").html("&#9776;");
+        sideOpen=false;
+      }else if(!sideOpen){
+     $(".slidenav").attr("expand","true");
+     $(".slideToggle").html("&#9747;");
+     $(".slideToggle").css("font-weight","bolder");
+     sideOpen=true;
+      }
   });
   $(".slideToggle").focusout(function(){
     $(".slidenav").attr("expand","false");
+    $(".slideToggle").html("&#9776;");
+    sideOpen=false;
   });
   $(".searchToggle").click(function(){
       $(".searchCon").attr("display","block");

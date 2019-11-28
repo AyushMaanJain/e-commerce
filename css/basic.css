@@ -198,33 +198,44 @@ margin-bottom:0px;
 .carousel_text p{
     font-size:20px;
 }
-
 .horizontal-list{
-    width: 100%;
-    padding:5px 10px;
+    width:100%;
     float:left;
+    background: transparent;
+}
+.horizontal-list h2{
+    float: left;
+    margin-left: 20px;
     font-family: sans-serif;
 }
-.horizontal-list h1{width: 100%;}
 .horizontal-list .cards{
+    width: calc(100%-20px);
     float: left;
-    width: 100%;}
-.cards .card{
-    float:left;
-    margin-right: 1%;
-    width: 17%;
-    padding:5px;
-    min-width:100px;
-    border-radius: 8px;
+}
+.cardA,.cardB,.cardC,.cardD,.cardE{
+    width:17%;
+    margin-left:1%;
+    margin-right:1%;
+    float:left; 
+}
+.card img{
+    width:100%;
+}
+.card h3{
+    margin: 10px 0px;
     text-align: center;
 }
-.card img,.card h3,.card h4{
-    border-radius:5px;
-    float: left;
-    width:calc(100%); }
-
 
 @media(max-width:992px){
+    .cardA,.cardB,.cardC,.cardD{
+        width:23%;
+        margin-left:1%;
+        margin-right:1%;
+    }
+    .cardE{
+        width: 0px;
+        display: none;
+    }
     .image,.desc{width: 100%;}
     .desc{height:auto;}
     .carousel_container{
@@ -233,7 +244,15 @@ margin-bottom:0px;
 }
 
 @media (max-width:768px){
-    
+    .cardA,.cardB,.cardC{
+        width:31%;
+        margin-left:1%;
+        margin-right:1%;
+    }
+    .cardE,.cardD{
+        width: 0px;
+        display: none;
+    }
     .slideToggle,.popup,.searchToggle{
         display: block;
     }
@@ -290,16 +309,20 @@ margin-bottom:0px;
         width: 100%;
     }
     .home{
+        left:0;
         margin-left: -8px;
-        left:0;}
-    .slidenav[expand="false"]{width: 0px;}
+        
+        
+        }
+    .slidenav[expand="false"]{
+        overflow: scroll;
+        width: 0px;}
     .slidenav[expand="true"]{  
-        width: 90%;
+        width: 70%;
     }
     .slidenav a{
-        padding: 8px 0px;
+        padding: 8px 20px;
         width:100%;
-        text-align: center;
     }
     
 }
