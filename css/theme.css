@@ -88,6 +88,17 @@ input:focus{outline: none;}
 .card img{
     border-radius:7px;
 }
+
+.bottom{
+        background:#222;
+}
+.bottom .fa a{
+    text-decoration: none;
+    color: #fff;
+}
+.bottom .fa a:hover{
+    color: #0bb;
+}
 @media (max-width:768px){
     .popbase{
         border: solid;

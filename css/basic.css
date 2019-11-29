@@ -27,7 +27,7 @@ text-decoration:none;
 
 .slideToggle{
     display: none;
-    padding:0px 8px 1px 8px;
+    padding:0px 8px 2px 8px;
     margin-right: 20px;
     float: left;
     font-size: 20px;
@@ -226,6 +226,17 @@ margin-bottom:0px;
     text-align: center;
 }
 
+.bottom{
+    margin-top:30px;
+    padding: 20px 0px;
+   width:100%;
+    float:left;
+}
+.bottom .fa a{
+    font-size: 50px;
+    margin-left: 30px;
+    transition: 0.3s
+}
 @media(max-width:992px){
     .cardA,.cardB,.cardC,.cardD{
         width:23%;
@@ -324,5 +335,7 @@ margin-bottom:0px;
         padding: 8px 20px;
         width:100%;
     }
-    
+    .hidenable{
+        display: none;
+    }
 }
