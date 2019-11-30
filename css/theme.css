@@ -91,14 +91,46 @@ input:focus{outline: none;}
 
 .bottom{
         background:#222;
+        color: #fff;
+}
+.bottom h3{
+    font-family: sans-serif;
+    font-style: oblique;
 }
 .bottom .fa a{
     text-decoration: none;
     color: #fff;
 }
-.bottom .fa a:hover{
-    color: #0bb;
+.bottom .fa a span{
+    padding:10px;
+    border-radius:15px;
 }
+.bottom .fa a span[onColor="red"]:hover{
+    background:#d22;
+}
+.bottom .fa a span[onColor="blue"]:hover{
+    background:#22d;
+}
+.bottom .fa a span[onColor="cyan"]:hover{
+    background:#2dd;
+}
+.bottom .fa a span[onColor="black"]:hover{
+    background:#000;
+}
+.bottom .fa a span[onColor="Dblue"]:hover{
+    background:linear-gradient(120deg,#00f,#0ff);
+}
+.bottom .fa a span[onColor="Lblue"]:hover{
+    background:#29d;
+}
+.bottom .text a{
+    text-decoration: none;
+    color: #ccc;
+}
+.bottom .text a:hover{
+    color: #fff;
+}
+
 @media (max-width:768px){
     .popbase{
         border: solid;
