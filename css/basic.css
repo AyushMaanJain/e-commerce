@@ -232,11 +232,36 @@ margin-bottom:0px;
    width:100%;
     float:left;
 }
-.bottom .fa a{
-    font-size: 50px;
-    margin-left: 30px;
+.bottom .fa{
+    margin-bottom:20px;
+}
+.bottom h3{
+    margin-top:0px;
+padding-left: 20px;
+
+}
+.bottom .fa a span{
     transition: 0.3s
 }
+.bottom .fa a{
+    font-size: 50px;
+    margin-left: 10px;
+    
+}
+.bottom .text li{
+     padding:5px 0px;
+}
+.bottom .text ul{
+  list-style-type: none;
+  margin-left:30px;
+  padding: 0;
+}
+.bottom .text a{
+    font-size: 20px;
+    transition: 0.1s;
+   
+}
+
 @media(max-width:992px){
     .cardA,.cardB,.cardC,.cardD{
         width:23%;
