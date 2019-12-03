@@ -82,14 +82,14 @@ padding: 0px 0px 8px 0px;
 }
 .base{
     position: fixed;
-    padding-top: 15px;
     margin-left: -8px;
-    top:61px;
+    top:60px;
     float:left;
 }
 .base .form{
     float: right;
     margin-right:20px;
+    margin-top:20px;
     padding:20px 40px;
     transition: 1s;
 }
@@ -419,4 +419,24 @@ padding-left: 20px;
     .hidenable{
         display: none;
     }
+    .base .form{
+    float:left;
+    margin-right:0px;
+    margin-top:0px;
+    padding:40px 0px;
+    height:100vh;
+    width:100vw  ;
+    transition: 0.3s;
+    border-radius: 0px;
+}
+#Login form,#register form{
+ margin:0px 20px;
+float: none;
+}
+.outer{
+    margin-left: 10vw;
+}
+#register form input,#Login form input{
+    width:80vw;
+}
 }

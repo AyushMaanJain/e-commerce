@@ -1,14 +1,29 @@
 $(document).ready(function(){
     var slide=1;
     var sideOpen=false;
+    var popup=false;
     var w=window.innerWidth;
     
-  $(".popup").focus(function(){
+  $(".popup").click(function(){
+      if(popup){
+          $(".options").attr("display","none");
+          popup=false;
+      }else if(!popup){
     $(".options").attr("display","block");
+    popup=true;
+      }
   });
-  $(".popup").focusout(function(){
+  $(".slideToggle").click(function(){
     $(".options").attr("display","none");
-   
+    popup=false;
+  });
+  $(".searchToggle").click(function(){
+    $(".options").attr("display","none");
+    popup=false;
+  });
+  $(".options").click(function(){
+    $(".options").attr("display","none");
+    popup=false;
   });
   $(".slideToggle").click(function(){
       if(sideOpen){
