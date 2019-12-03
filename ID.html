@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>account</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/theme.css" type="text/css">
+        <link rel="stylesheet" href="css/basic.css" type="text/css">
+        <link rel="stylesheet" href="fonts/fonts setup.css" type="text/css"/>
+    </head>
+    <body>
+        <div class="head">
+            <span class="Pname"><a href="index.html">Ailmax</a></span>
+            <button class="searchToggle fa fa-search" style="margin-right: 30px;"></button>
+             <div class="searchCon" display="none">
+            <span class="back fa fa-arrow-left"></span>
+            <form method="get" action="filter" class="searchBox">
+            <span class="fa fa-search"></span>
+            <input type="text" name="search" placeholder="search..." autocomplete="off"/>
+        </form>
+        </div>
+        </div>
+        <div class="base" style="height:calc(100%); width: 100%;">
+            <div class="form">
+                <div class="outer">
+                    <button class="fa fa-google" style="background: #d00;"></button>
+                    <button class="fa fa-facebook" style="background: #00d;"></button>
+                    <button class="fa fa-twitter" style="background: #0dd;"></button>
+                    <button class="fa fa-github" style="background: #222;"></button>
+                </div>
+                <br>
+                <div id="register">
+                    <form method="post" action="register">
+                        <h2>Sign Up</h2>
+                    <input type="text" name="Name" placeholder="Your Name"/><br>
+                    <input type="emil" name="email" placeholder="Your email"/><br>
+                    <input type="password" name="Name" placeholder="Your Password"/><br>
+                    <button type="submit">Create Account</button>
+                    <a href="ID.html?login"><b>Sign in</b></a>
+                    </form>
+                </div>
+                <br>
+                <div id="Login">
+                <h2>Sign In</h2>
+                <form method="post" action="login">
+                    <input type="emil" name="email" placeholder="Your email"/><br>
+                    <input type="password" name="Name" placeholder="Your Password"/><br>
+                    <button type="submit">Sign In</button>
+                   
+                    <a href="ID.html?register"><b>Create new Account</b></a>
+                </form>
+                </div>
+            </div>
+        </div>
+        <script src="Js/jquery-3.4.1.js"></script>
+        <script src="Js/ID/main.js"></script>
+    </body>
+</html>

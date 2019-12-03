@@ -21,7 +21,7 @@ background:#639;
 color:#fff;
 }
 .searchBox input::placeholder{
-    color:#bbb ;
+    color:#bbb;
 }
 .searchBox input{
     font-size: 15px;
@@ -59,14 +59,65 @@ background: #280069;
 .slidenav span{
     color:transparent;
 }
-.home{
+.home,.base{
     background:#505;
+}
+.base .form{
+    background: #93c;
+    border-radius: 10px;
+}
+.base .form h2{
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+}
+.outer button{
+    border: none;
+    color:#fff;
+    border-radius: 10px;
+        opacity:0.9;
+}
+.outer button:hover{
+opacity: 1;
+}
+#register form input,#Login form input{
+    border: none;
+   border-radius:5px;
+background:#639;
+color:#fff; 
+}
+#register form input::placeholder,#Login form input::placeholder{
+   color:#bbb; 
+}
+#register form button,#Login form button{
+     border: none;
+   border-radius:10px;
+background:linear-gradient(#709,#505,#709);
+color:#fff; 
+transition: 0.3s;
+}
+#register form button:hover,#Login form button:hover{
+
+    background:linear-gradient(#505,#709,#505);
+}
+#register form a,#Login form a{
+    color: #ddd;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+#register form a:hover,#Login form a:hover{
+    text-shadow:0px 0px 1px;
+    text-decoration: underline;
 }
 input:focus{outline: none;}
 .carousel_text *{
      font-family: sans-serif;
     color:#fff;
 }
+
+
 .horizontal-list{
     background: transparent;
     color: #fff;

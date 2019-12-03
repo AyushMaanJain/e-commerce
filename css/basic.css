@@ -74,12 +74,68 @@ padding: 0px 0px 8px 0px;
     float:left;
     left:0;
     top:0;
+    width: 100%;
     position: static;
     padding-top: 60px;
     margin-left:242px;
     
 }
+.base{
+    position: fixed;
+    padding-top: 15px;
+    margin-left: -8px;
+    top:61px;
+    float:left;
+}
+.base .form{
+    float: right;
+    margin-right:20px;
+    padding:20px 40px;
+    transition: 1s;
+}
+.base .form h2{
+    margin:10px;
+    
+}
 
+#Login,#register{
+    float: left;
+}
+#Login form,#register form{
+    float: left;
+}
+#register form input,#Login form input{
+    float:left;
+    width:300px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    padding:10px 15px;
+}
+#register form button,#Login form button{
+    float:left;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    padding:10px 15px;
+}
+#register form a,#Login form a{
+    float:right;
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    padding:10px 15px;    
+}
+.outer{
+    width: auto;
+    padding-left: 50px;
+}
+.outer button{
+    width:50px;
+    margin:0px 2px;
+    font-size:25px;
+    padding: 10px;
+}
 .searchBox input{
     padding-left:5px;
     width:87%;
