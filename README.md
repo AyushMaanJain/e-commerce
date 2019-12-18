@@ -25,9 +25,8 @@ user account basic layout has completed
 
 Product page have not started yet
 
-# web page
-Check preview of my work
-https://ayushmaanjain.github.io/practice/
+## [preview of my work]
+(https://ayushmaanjain.github.io/practice/)
 
 ### Please suggest me any improvement or any change.
 
