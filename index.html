@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
     <head>
         <link rel="stylesheet" href="css/theme.css" type="text/css">
@@ -7,9 +8,10 @@
         <link rel="stylesheet" href="Pic/PictureStyling.css" type="text/css"/>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
+        <script src="Js/Angular.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
+    <body style="overflow-x: hidden">
         <nav class="head">
             <Button class="slideToggle">&#9776;</Button>
         <span class="Pname"><a href="#">Ailmax</a></span>
@@ -29,13 +31,15 @@
         </form>
         </div>
         </nav>
-        <div class="slidenav" expand="false">
+       
+        <div class="slidenav" style="overflow: scroll" expand="false">
             <span>Price </span>
             <a href="#">Free</a>
             <a href="#">Paid</a>
             <span>Value  </span>
             <a href="#">Trending</a>
             <a href="#">Latest</a>
+           
             <span>Uses </span>
             <a href="#">Anti Virus</a>
             <a href="#">Operating System</a>
@@ -44,18 +48,19 @@
             <a href="#">Graphic Design</a>
             <a href="#">Data/Financing</a>
             <a href="#">Others</a>
+            
         </div>
-        <div class="home">
+        <div class="home" ng-app="Home_pg" ng-controller="ControllA">
             <div class="carousel_container">
                 <div class="image">
                     <div id="picA" active="true" class="carousel_picture">
-                        <img src="Pic/koding.png" style="">
+                        <img src={{offer[0].img}} style="">
                     </div>
                     <div id="picB" active="false" class="carousel_picture">
-                        <img src="Pic/haudini.png" style="">
+                        <img src={{offer[1].img}} style="">
                     </div>
                     <div id="picC" active="false" class="carousel_picture">
-                         <img src="Pic/windows10.jpg" style="">
+                         <img src={{offer[2].img}} style="">
                     </div>
                 </div>
                 <div class="desc">
@@ -69,49 +74,50 @@
                     </div>
                 </div>
                     <div id="textA" active="true" class="carousel_text">
-                        <h1>Koding</h1>
-                        <p>Developement Enviorment automation platform</p>
+                        <h1>{{offer[0].name}}</h1>
+                        <p>{{offer[0].data}}</p>
                         <a href="#">See more information &rarr;</a>
                     </div>
                     <div id="textB" active="false" class="carousel_text">
-                        <h1>houdini</h1>
-                        <p>A 3D animation software application</p>
+                        <h1>{{offer[1].name}}</h1>
+                        <p>{{offer[1].data}}</p>
                         <a href="#">See more information &rarr;</a>
                     </div>
                     <div id="textC" active="false" class="carousel_text">
-                        <h1>Windows10</h1>
-                        <p>series of personal computer operating systems</p>
+                        <h1>{{offer[2].name}}</h1>
+                        <p>{{offer[2].data}}</p>
                         <a href="#">See more information &rarr;</a>
                     </div>
             </div>
             </div>
+         
             <div class="horizontal-list" style="">
                 <h2>Latest</h2>
                 <div class="cards">
                     <div class="card cardA">
-                        <img src="Pic/Gambas.png" style="margin-bottom: 8px;">
-                        <h3>Product</h3>
-                        <h3>Price</h3>
+                        <img src="{{latest[0].img}}" style="margin-bottom: 8px;">
+                        <h3>{{latest[0].name}}</h3>
+                        <h3>{{latest[0].price}}</h3>
                     </div>
                     <div class="card cardB">
-                        <img src="Pic/sap-logo.png">
-                        <h3>Product</h3>
-                        <h3>Price</h3>
+                        <img src="{{latest[1].img}}">
+                        <h3>{{latest[1].name}}</h3>
+                        <h3>{{latest[1].price}}</h3>
                     </div>
                     <div class="card cardC">
-                        <img src="Pic/QuickHeal.png">
-                        <h3>Product</h3>
-                        <h3>Price</h3>
+                        <img src="{{latest[2].img}}">
+                        <h3>{{latest[2].name}}</h3>
+                        <h3>{{latest[2].price}}</h3>
                     </div>
                     <div class="card cardD">
-                        <img src="Pic/CoralDraw.jpg">
-                        <h3>Product</h3>
-                        <h3>Price</h3>
+                        <img src="{{latest[3].img}}">
+                        <h3>{{latest[3].name}}</h3>
+                        <h3>{{latest[3].price}}</h3>
                     </div>
                     <div class="card cardE">
-                        <img src="Pic/Adobe illustrator.png">
-                        <h3>Product</h3>
-                        <h3>Price</h3>
+                        <img src="{{latest[4].img}}">
+                        <h3>{{latest[4].name}}</h3>
+                        <h3>{{latest[4].price}}</h3>
                     </div>
                 </div>
             </div>
@@ -119,29 +125,29 @@
                 <h2>Top Paid</h2>
                 <div class="cards">
                     <div class="card cardA">
-                        <img src="Pic/MacOS.png" style="">
-                        <h3>Product</h3>
-                        <h3>Price</h3>
+                        <img src="{{paid[0].img}}" style="">
+                        <h3>{{paid[0].name}}</h3>
+                        <h3>{{paid[0].price}}</h3>
                     </div>
                     <div class="card cardB">
-                        <img src="Pic/Maya.jpg">
-                        <h3>Product</h3>
-                        <h3>Price</h3>
+                        <img src="{{paid[1].img}}">
+                        <h3>{{paid[1].name}}</h3>
+                        <h3>{{paid[1].price}}</h3>
                     </div>
                     <div class="card cardC">
-                        <img src="Pic/Unity.jpg">
-                        <h3>Product</h3>
-                        <h3>Price</h3>
+                        <img src="{{paid[2].img}}">
+                        <h3>{{paid[2].name}}</h3>
+                        <h3>{{paid[2].price}}</h3>
                     </div>
                     <div class="card cardD">
-                        <img src="Pic/Norton.jpg">
-                        <h3>Product</h3>
-                        <h3>Price</h3>
+                        <img src="{{paid[3].img}}">
+                        <h3>{{paid[3].name}}</h3>
+                        <h3>{{paid[3].price}}</h3>
                     </div>
                     <div class="card cardE">
-                        <img src="Pic/VisualStudio.png">
-                        <h3>Product</h3>
-                        <h3>Price</h3>
+                        <img src="{{paid[4].img}}">
+                        <h3>{{paid[4].name}}</h3>
+                        <h3>{{paid[4].price}}</h3>
                     </div>
                 </div>
             </div>
@@ -149,32 +155,33 @@
                 <h2>Top Free</h2>
                 <div class="cards">
                     <div class="card cardA">
-                        <img src="Pic/mysql.jpg" style="">
-                        <h3>Product</h3>
-                        <h3>Price</h3>
+                        <img src="{{free[0].img}}" style="">
+                        <h3>{{free[0].name}}</h3>
+                        <h3>{{free[0].price}}</h3>
                     </div>
                     <div class="card cardB">
-                        <img src="Pic/Blender.jpg">
-                        <h3>Product</h3>
-                        <h3>Price</h3>
+                        <img src="{{free[1].img}}">
+                        <h3>{{free[1].name}}</h3>
+                        <h3>{{free[1].price}}</h3>
                     </div>
                     <div class="card cardC">
-                        <img src="Pic/zipBooks.png">
-                        <h3>Product</h3>
-                        <h3>Price</h3>
+                        <img src="{{free[2].img}}">
+                        <h3>{{free[2].name}}</h3>
+                        <h3>{{free[2].price}}</h3>
                     </div>
                     <div class="card cardD">
-                        <img src="Pic/avira.png">
-                        <h3>Product</h3>
-                        <h3>Price</h3>
+                        <img src="{{free[3].img}}">
+                        <h3>{{free[3].name}}</h3>
+                        <h3>{{free[3].price}}</h3>
                     </div>
                     <div class="card cardE">
-                        <img src="Pic/Android Studio.png" style="margin-bottom: -7px;">
-                        <h3>Product</h3>
-                        <h3>Price</h3>
+                        <img src="{{free[4].img}}" style="margin-bottom: -7px;">
+                        <h3>{{free[4].name}}</h3>
+                        <h3>{{free[4].price}}</h3>
                     </div>
                 </div>
             </div>
+            
             <div class="bottom">
                 <h3>Follow Us on:</h3>
                 <div class="fa">
@@ -197,5 +204,37 @@
         </div>
         <script src="Js/jquery-3.4.1.js"></script>
         <script src="Js/main.js"></script>
+        <script>
+var app = angular.module('Home_pg', []);
+app.controller('ControllA', function($scope) {
+  $scope.offer = [
+      {name:"Koding",    img:"Pic/koding.png",   data:"Now avilable in .msi extention"},
+      {name:"Haudini",   img:"Pic/haudini.png",  data:"getting 20% discount on Licence"},
+      {name:"Windows 10",img:"Pic/windows10.jpg",data:"getting 50% discount on Product-key"}
+  ];
+  $scope.latest = [
+      {name:"Gambas",           img:"Pic/Gambas.png",           price:"Free"},
+      {name:"Sap",              img:"Pic/sap-logo.png",         price:"\u20B9"+"49 324 "},
+      {name:"QuickHeal",        img:"Pic/QuickHeal.png",        price:"\u20B9"+"1 909"},
+      {name:"Coral Draw",       img:"Pic/CoralDraw.jpg",        price:"\u20B9"+"55 000"},
+      {name:"Adobe Illustrator",img:"Pic/Adobe illustrator.png",price:"\u20B9"+"2 300"}
+  ];
+  $scope.paid = [
+      {name:"MAC",          img:"Pic/MacOS.png",       price:"\u20B9"+"2 000"},
+      {name:"Maya",         img:"Pic/Maya.jpg",        price:"\u20B9"+"11 000"},
+      {name:"Unity",        img:"Pic/Unity.jpg",       price:"\u20B9"+"8 875"},
+      {name:"Norton",       img:"Pic/Norton.jpg",      price:"\u20B9"+"3 500"},
+      {name:"Visual Studio",img:"Pic/VisualStudio.png",price:"\u20B9"+"3 195"}
+  ];
+  $scope.free = [
+      {name:"MySQL",         img:"Pic/mysql.jpg",         price:"Free"},
+      {name:"Blender",       img:"Pic/Blender.jpg",       price:"Free"},
+      {name:"zip Book",      img:"Pic/zipBooks.png",      price:"Free"},
+      {name:"Avira",         img:"Pic/avira.png",         price:"Free"},
+      {name:"Android Studio",img:"Pic/Android Studio.png",price:"Free"}
+  ];
+  
+});
+</script>
     </body>
 </html>

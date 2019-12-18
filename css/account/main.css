@@ -1,0 +1,49 @@
+.head{position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.head img{
+    margin-left: 40vw;
+    margin-right: 40vw;
+    width:20vw;
+    height: 20vw;
+    
+    border-radius:20vw;
+}
+.head .uname{
+    margin: 0px;
+    margin-top: 0px;
+    width: 100vw;
+    font-size: 28px;
+    font-weight: bolder;
+    padding: 10px 0px;
+    text-align: center;
+    font-family:  sans-serif;
+}
+.side-one{
+    position: fixed;
+  
+}
+.side-one ul{
+    list-style-type: none;
+    padding-left: 0px;
+    margin:20px 0px;
+}
+.side-one li {
+  padding: 7px;
+  width:120px;
+  padding-left: 40px;
+  transition: 0.3s;
+   
+}
+
+.body{
+        height: 1000px;
+    margin-left:160px;
+    
+    background: cyan;
+
+}
