@@ -25,8 +25,12 @@ user account basic layout has completed
 
 Product page have not started yet
 
-## [preview of my work]
-(https://ayushmaanjain.github.io/practice/)
+# Goals to achive
+- [ ] ID page responsive for better View for android
+- [ ] complete account page on the basis of its sidenav
+
+## preview of web page
+https://ayushmaanjain.github.io/practice/
 
 ### Please suggest me any improvement or any change.
 
