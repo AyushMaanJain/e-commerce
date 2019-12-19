@@ -37,13 +37,17 @@
   width:120px;
   padding-left: 40px;
   transition: 0.3s;
-   
 }
 
 .body{
         height: 1000px;
     margin-left:160px;
-    
-    background: cyan;
-
+}
+@media (max-width:768px){
+    .side-one{
+        display: none;
+    }
+    .body{
+        margin-left: -8px;
+    }
 }

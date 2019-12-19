@@ -3,7 +3,11 @@ $(document).ready(function(){
     var marginvar=w/5;
     var marginfix=30+40+15;
      $(".body").css("padding-top",marginvar+marginfix+"px");
+     if(w>768){
      $(".body").css("width",w-160+"px");
+ }else if(w<768){
+     $(".body").css("width",w+"px");
+ }
 $(window).scroll(function(){
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
 
@@ -49,6 +53,11 @@ if(Margin>38){
     var marginvar=w/5;
     var marginfix=30+40+15;
      $(".body").css("margin-top",marginvar+marginfix+"px");
+    if(w>768){
+     $(".body").css("width",w-160+"px");
+ }else if(w<768){
      $(".body").css("width",w+"px");
+ }
+    
      });
  });

@@ -199,6 +199,8 @@ input:focus{outline: none;}
     color: #fff;
 }
 
+.body{background: cyan;}
+
 @media (max-width:768px){
     .popbase{
         border: solid;

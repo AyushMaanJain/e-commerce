@@ -127,7 +127,7 @@ padding: 0px 0px 8px 0px;
     padding:10px 15px;    
 }
 .outer{
-    width: auto;
+    width: 230px;
     padding-left: 50px;
 }
 .outer button{
@@ -434,7 +434,8 @@ padding-left: 20px;
 float: none;
 }
 .outer{
-    margin-left: 10vw;
+    padding-left:30px;
+    padding-right:30px;
 }
 #register form input,#Login form input{
     width:80vw;
