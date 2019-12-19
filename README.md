@@ -19,14 +19,12 @@ Every data related to product such as price, name, image is contained in angular
 
 home page layout have completed and responsive as well
 
-sign_in and sign_up still have to be more responsive for small display devices such as mobile phones
-
 user account basic layout has completed
 
 Product page have not started yet
 
 # Goals to achive
-- [ ] ID page responsive for better View for android
+- [x] ID page responsive for better View for android
 - [ ] complete account page on the basis of its sidenav
 
 ## preview of web page
