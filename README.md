@@ -18,7 +18,7 @@ Every data related to product such as price, name, image is contained in angular
 # About work
 
 - [x] home page layout have completed and responsive as well
-- [x] complete ID (SignIn & SignUp) page
+- [x] complete ID (Sign In & Sign Up) page
 - [ ] user account
   - [x] Basic Layout
   - [ ] User Account detais.
