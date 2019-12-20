@@ -30,7 +30,11 @@ Every data related to product such as price, name, image is contained in angular
 - [ ] complete account page on the basis of its sidenav
 
 ## preview of web page
-https://ayushmaanjain.github.io/practice/
+you can see my web page below §
+- [Home page](https://ayushmaanjain.github.io/e-commerce/)
+- [Sign-In page](https://ayushmaanjain.github.io/e-commerce/ID.html?login)
+- [Sign-Up page](https://ayushmaanjain.github.io/e-commerce/ID.html?register)
+- [User-Account page](https://ayushmaanjain.github.io/e-commerce/account.html)
 
 ***Please suggest me any improvement or any change.***
 
