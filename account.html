@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/account/main.css" type="text/css"/>
         <link rel="stylesheet" href="css/theme.css" type="text/css"/>
+        <link rel="stylesheet" href="fonts/fonts setup.css" type="text/css"/>
     </head>
     <body style="overflow-x: hidden;background: #25a5d5">
         <div class="head">
@@ -15,16 +16,82 @@
                 <ul>
                     <li state="active"><a href="#gen">General</a></li>
                     <li state="inactive"><a href="#link">Linked Account</a></li>
-                    <li state="inactive"><a href="#link">Cart</a></li>
-                    <li state="inactive"><a href="#tran">Transactions</a></li>
+                    <li state="inactive"><a href="#cart">Cart</a></li>
                     <li state="inactive"><a href="#pay">Payments</a></li>
+                    <li state="inactive"><a href="#tran">Transactions</a></li>
                     <li state="inactive"><a href="#sec">Security</a></li>
                 </ul>
             </div>
         </div>
          
         <div class="body">
-           
+            <div id="gen" class="part">
+                <h1>General Setting</h1>
+                <h2>User account</h2>
+                <div class="field">
+                    <form method="post" action="C_name">
+                        <input type="text" disabled="true" value="User Name"/>
+                        <button type="submit" class="fa fa-pencil"></button>
+                    </form>
+                    <form action="post" action="C_email">
+                        <input type="email" disabled="true" value="email@example.com"/>
+                        <button type="submit" class="fa fa-pencil"></button>
+                    </form>
+                    <h2>Personal Details</h2>
+                    <div class="person">
+                        <form method="post" action="C_person">
+                            <input type="text" placeholder="prefered language" name="Language"/>
+                            <input type="number" placeholder="Phone number" name="Phone"/>
+                            <input type="text" placeholder="address line1" name="address1"/>
+                            <input type="text" placeholder="address line2" name="address2"/>
+                            <input type="text" placeholder="Region" name="Country"/>
+                            <input type="text" placeholder="State" name="State"/>
+                            <input type="text" placeholder="City" name="city"/>
+                            <input type="text" placeholder="Pin code" name="PIN"/>
+                            <br>
+                            <button type="submit">Update</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="link" class="part">
+                <h1>Linked Account Settings</h1>
+                <div class="field">
+                    <div class="card">
+                        <span class="fa fa-google-plus" Color="red"></span><br>
+                        <button class="connect">Connect</button>
+                    </div>
+                    <div class="card">
+                        <span class="fa fa-github" Color="black"></span><br>
+                        <button class="connect">Connect</button>
+                    </div>
+                    <div class="card">
+                        <span class="fa fa-facebook" Color="blue"></span><br>
+                        <button class="connect">Connect</button>
+                    </div>
+                    <div class="card">
+                        <span class="fa fa-twitter" Color="Lblue"></span><br>
+                        <button class="connect">Connect</button>
+                    </div>
+                </div>
+            </div>
+            <div id="cart" class="part">
+                <h1>User Cart</h1>
+            </div>
+            <div id="pay" class="part">
+                <h1>Payment method</h1>
+                <div class="field">
+                    
+                </div>
+            </div>
+            <div id="tran" class="part">
+                <h1>Account Transaction</h1>
+            </div>
+            
+            <div id="sec" class="part">
+                <h1>Security Settings</h1>
+            </div>
+            </div>
         </div>
        <script src="Js/jquery-3.4.1.js"></script>
         <script src="Js/Account/main.js"></script>

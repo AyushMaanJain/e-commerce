@@ -40,9 +40,82 @@
 }
 
 .body{
-        height: 1000px;
+        height:auto;
     margin-left:160px;
+    float: left;
 }
+
+.part{
+    margin-left:30px;
+    padding-top:90px;
+    width: 100%;
+    float:left;
+}
+.part h2{
+    float: left;
+}
+.field,.person{
+    width: 100%;
+    float: left;
+}
+.field form input{
+    background: #eee;
+}
+.field form button{
+    background: #5f0;
+}
+.field form input,
+.field form button{
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius:5px;
+}
+.field form{
+    width: 50%;
+    float:left;
+}
+.field .card{
+    float: left;
+    margin: 20px;
+    
+    box-shadow:0px 0px 4px; 
+    border-radius:5px;
+}
+.field .card button{
+    float:left;
+    width: 150px;
+    padding: 10px;
+    margin: 5%;
+    font-weight:bold;
+    font-size: 15px;
+    
+    border: none;
+    border-radius:5px;
+    color: white;
+    background: #055;
+}
+.field .card span{
+    font-size: 40px;
+    width:50px;
+    text-align:center;
+    margin: 40px;
+    padding: 20px;
+    float: left;
+    
+    color: white;
+    border-radius:10px;
+}
+.person form input{
+    width: 40%;
+    margin-top:10px;
+}
+.person form{
+    width: 100%;
+    float: left;
+}
+
 @media (max-width:768px){
     .side-one{
         display: none;

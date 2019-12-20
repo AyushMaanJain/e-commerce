@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var w=window.innerWidth;
     var marginvar=w/5;
-    var marginfix=30+40+15;
+    var marginfix=30+40+15-80;
      $(".body").css("padding-top",marginvar+marginfix+"px");
      if(w>768){
      $(".body").css("width",w-160+"px");
@@ -51,8 +51,8 @@ if(Margin>38){
      $(window).resize(function(){
           w=window.innerWidth;
     var marginvar=w/5;
-    var marginfix=30+40+15;
-     $(".body").css("margin-top",marginvar+marginfix+"px");
+    var marginfix=30+40+15-80;
+     $(".body").css("padding-top",marginvar+marginfix+"px");
     if(w>768){
      $(".body").css("width",w-160+"px");
  }else if(w<768){

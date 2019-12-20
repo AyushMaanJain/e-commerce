@@ -141,9 +141,9 @@ input:focus{outline: none;}
 }
 
 .side-one li[state="active"]{
-     background:linear-gradient(90deg,#33b5e5,#33b5e5,cyan);
+     background:linear-gradient(90deg,#33b5e5,#33b5e5,white);
     border:1px solid;
-    border-color:transparent cyan transparent #25a5d5;
+    border-color:transparent white transparent #25a5d5;
     
 }
 .side-one li[state="inactive"]{
@@ -173,24 +173,44 @@ input:focus{outline: none;}
     padding:10px;
     border-radius:15px;
 }
-.bottom .fa a span[onColor="red"]:hover{
+span[onColor="red"]:hover{
     background:#d22;
 }
-.bottom .fa a span[onColor="blue"]:hover{
+span[onColor="blue"]:hover{
     background:#22d;
 }
-.bottom .fa a span[onColor="cyan"]:hover{
+span[onColor="cyan"]:hover{
     background:#2dd;
 }
-.bottom .fa a span[onColor="black"]:hover{
+span[onColor="black"]:hover{
     background:#000;
 }
-.bottom .fa a span[onColor="Dblue"]:hover{
+span[onColor="cyan-blue"]:hover{
     background:linear-gradient(120deg,#00f,#0ff);
 }
-.bottom .fa a span[onColor="Lblue"]:hover{
+span[onColor="Lblue"]:hover{
     background:#29d;
 }
+
+span[Color="red"]{
+    background:#d22;
+}
+span[Color="blue"]{
+    background:#22d;
+}
+span[Color="cyan"]{
+    background:#2dd;
+}
+span[Color="black"]{
+    background:#000;
+}
+span[Color="cyan-blue"]{
+    background:linear-gradient(120deg,#00f,#05f,#00fefe);
+}
+span[Color="Lblue"]{
+    background:#29d;
+}
+
 .bottom .text a{
     text-decoration: none;
     color: #ccc;
@@ -199,7 +219,7 @@ input:focus{outline: none;}
     color: #fff;
 }
 
-.body{background: cyan;}
+.body{background: white;}
 
 @media (max-width:768px){
     .popbase{
