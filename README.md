@@ -32,6 +32,6 @@ Every data related to product such as price, name, image is contained in angular
 ## preview of web page
 https://ayushmaanjain.github.io/practice/
 
-### Please suggest me any improvement or any change.
+***Please suggest me any improvement or any change.***
 
-### Thank You
+***Thank You***
