@@ -23,6 +23,7 @@
     text-align: center;
     font-family:  sans-serif;
 }
+/* expandable head end*/
 .side-one{
     position: fixed;
   
@@ -38,87 +39,202 @@
   padding-left: 40px;
   transition: 0.3s;
 }
-
+/* side nav list end*/
 .body{
         height:auto;
     margin-left:160px;
     float: left;
 }
-
+/* navigation div start */
 .part{
     margin-left:30px;
     padding-top:90px;
-    width: 100%;
+    
     float:left;
 }
 .part h2{
     float: left;
 }
-.field,.person{
-    width: 100%;
-    float: left;
+/* navigation div start */
+
+.form-container input{
+border:none;
+background: #eee;
+font-weight: 700;
+padding: 10px;
+border-radius: 5px;
 }
-.field form input{
-    background: #eee;
+
+.form-container button[type="submit"]{
+border:none;
+background: #5fae05;
+color: #fff;
+font-weight: 500;
+padding:10px 15px;
+border-radius: 5px;
 }
-.field form button{
-    background: #5f0;
+.form-container button[type="delete"]{
+border:none;
+background: #aa002d;
+color:#fff;
+font-weight: 700;
+font-style: italic;
+padding:10px 15px;
+border-radius: 5px;    
 }
-.field form input,
-.field form button{
-    margin-top: 10px;
-    padding: 10px;
-    font-size: 15px;
-    border: none;
-    border-radius:5px;
+.form-container button[type="reset"]{
+border:none;
+background: #555;
+color: #fff;
+font-weight: 500;
+padding:10px 15px;
+border-radius: 5px;
 }
-.field form{
-    width: 50%;
-    float:left;
-}
-.field .card{
-    float: left;
-    margin: 20px;
+.card{
+    border:none;
+    box-shadow: 0px 0px 3px;
+    border-radius: 10px;
     
-    box-shadow:0px 0px 4px; 
-    border-radius:5px;
 }
-.field .card button{
-    float:left;
-    width: 150px;
-    padding: 10px;
-    margin: 5%;
-    font-weight:bold;
-    font-size: 15px;
-    
-    border: none;
-    border-radius:5px;
-    color: white;
-    background: #055;
-}
-.field .card span{
-    font-size: 40px;
-    width:50px;
-    text-align:center;
-    margin: 40px;
-    padding: 20px;
-    float: left;
-    
-    color: white;
+.card span{
     border-radius:10px;
+    color: #fff;
 }
-.person form input{
-    width: 40%;
-    margin-top:10px;
+.card button{
+    border: none;
+    border-radius:5px;
+    background-color: #555;
+    color: #fff;
 }
-.person form{
+.payment-way{
+    background: #ddd;
+    border-radius: 10px;
+}
+.form-container .note{
+    color: #b52535;
+}
+/*transferable to theme*/
+
+.form-container{
     width: 100%;
+    float: left;
+}
+.form-container p{
+    margin-top: 0px;
+    font-size: 15px;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+}
+.form-container .note{
+    font-weight: 800;
+}
+.form-container .note:before{
+    content: "NOTE: "
+}
+.form-container button,.form-container input{
+    float: left;
+    margin-right: 10px
+}
+.form-container form.half{
+    width: 50%;
+    float: left;
+    margin-bottom: 15px;
+}
+.form-container form.full{
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+form.full input[width="auto"]{
+    width: auto;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 10px
+}
+form.full input[width="half"]{
+    width: 46%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+}
+form.full input[width="more-half"]{
+    width: 46%;
+    margin-right: 46%;
+    margin-bottom: 10px;
     float: left;
 }
 
+.card-container{
+    float: left;
+    width: 100%;
+}
+.card{
+    float: left;
+    padding: 20px 30px;
+    margin: 10px 20px;
+}
+.card span{
+    float: left;
+    padding: 10px;
+    width: 45px;
+    text-align: center;
+    font-size:25px;
+    margin:20px 14px;
+}
+.card button{
+    margin-top: 10px;
+    padding:10px;
+    font-weight:700;
+    text-align: center;
+    width: 95px;
+    
+}
+
+.payment-way{
+    float: left;
+    width: 100%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.payment-way h4{
+    float: left;
+}
+
+@media (max-width:992px){
+ form.full input[width="half"]{
+    width: 95%;
+    margin-right: 0px;
+  
+}
+ form.full input[width="more-half"]{
+    width: 95%;
+    margin-right: 0px;
+  
+}
+ form.full input[width="auto"]{
+    width: 44.5%;
+    margin-right: 10px;
+  
+}
+.form-container form.half{
+    width: 100%;
+    margin: 5px 0px;
+    float: left;
+}
+}
+
 @media (max-width:768px){
+     form.full input[width="auto"]{
+    width: 95.5%;
+    margin-right: 0px;
+}
     .side-one{
         display: none;
+    }
+    .part{
+        width: calc(100%-10px);
+        margin-left: 10px;
     }
     .body{
         margin-left: -8px;

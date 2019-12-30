@@ -141,7 +141,7 @@ input:focus{outline: none;}
 }
 
 .side-one li[state="active"]{
-     background:linear-gradient(90deg,#33b5e5,#33b5e5,white);
+     background:linear-gradient(90deg,#33b5e5,#55bfef,white);
     border:1px solid;
     border-color:transparent white transparent #25a5d5;
     

@@ -7,19 +7,20 @@
         <link rel="stylesheet" href="css/account/main.css" type="text/css"/>
         <link rel="stylesheet" href="css/theme.css" type="text/css"/>
         <link rel="stylesheet" href="fonts/fonts setup.css" type="text/css"/>
+        <script src="Js/Angular.js"></script>
     </head>
-    <body style="overflow-x: hidden;background: #25a5d5">
+    <body ng-app="user-data" ng-controller="userCtrl" id="userCtrl" style="overflow-x: hidden;background: #25a5d5">
         <div class="head">
-            <img src="Pic/User/male_avatar.png"/>
-            <p class="uname">Name</p>
+            <img src="{{image}}"/>
+            <p class="uname">{{name}}</p>
             <div class="side-one">
                 <ul>
-                    <li state="active"><a href="#gen">General</a></li>
-                    <li state="inactive"><a href="#link">Linked Account</a></li>
-                    <li state="inactive"><a href="#cart">Cart</a></li>
-                    <li state="inactive"><a href="#pay">Payments</a></li>
-                    <li state="inactive"><a href="#tran">Transactions</a></li>
-                    <li state="inactive"><a href="#sec">Security</a></li>
+                    <li id="li1" state="active"><a href="#gen">General</a></li>
+                    <li id="li2" state="inactive"><a href="#link">Linked Account</a></li>
+                    <li id="li3" state="inactive"><a href="#cart">Cart</a></li>
+                    <li id="li4" state="inactive"><a href="#pay">Payments</a></li>
+                    <li id="li5" state="inactive"><a href="#tran">Transactions</a></li>
+                    <li id="li6" state="inactive"><a href="#sec">Security</a></li>
                 </ul>
             </div>
         </div>
@@ -28,26 +29,26 @@
             <div id="gen" class="part">
                 <h1>General Setting</h1>
                 <h2>User account</h2>
-                <div class="field">
-                    <form method="post" action="C_name">
-                        <input type="text" disabled="true" value="User Name"/>
+                <div class="form-container">
+                    <form method="post" action="C_name" class="half">
+                        <input type="text" class="half-input" disabled="true" value="{{name}}"/>
                         <button type="submit" class="fa fa-pencil"></button>
                     </form>
-                    <form action="post" action="C_email">
-                        <input type="email" disabled="true" value="email@example.com"/>
+                    <form action="post" action="C_email" class="half">
+                        <input type="email" class="half-input" disabled="true" value="{{email}}"/>
                         <button type="submit" class="fa fa-pencil"></button>
                     </form>
                     <h2>Personal Details</h2>
                     <div class="person">
-                        <form method="post" action="C_person">
-                            <input type="text" placeholder="prefered language" name="Language"/>
-                            <input type="number" placeholder="Phone number" name="Phone"/>
-                            <input type="text" placeholder="address line1" name="address1"/>
-                            <input type="text" placeholder="address line2" name="address2"/>
-                            <input type="text" placeholder="Region" name="Country"/>
-                            <input type="text" placeholder="State" name="State"/>
-                            <input type="text" placeholder="City" name="city"/>
-                            <input type="text" placeholder="Pin code" name="PIN"/>
+                        <form method="post" action="C_person" class="full">
+                            <input type="text" width="half" placeholder="prefered language" name="Language"/>
+                            <input type="number" width="half" placeholder="Phone number" name="Phone"/>
+                            <input type="text" width="half" placeholder="address line1" name="address1"/>
+                            <input type="text" width="half" placeholder="address line2" name="address2"/>
+                            <input type="text" width="half" placeholder="Region" name="Country"/>
+                            <input type="text" width="half" placeholder="State" name="State"/>
+                            <input type="text" width="half" placeholder="City" name="city"/>
+                            <input type="text" width="half" placeholder="Pin code" name="PIN"/>
                             <br>
                             <button type="submit">Update</button>
                         </form>
@@ -56,7 +57,7 @@
             </div>
             <div id="link" class="part">
                 <h1>Linked Account Settings</h1>
-                <div class="field">
+                <div class="card-container">
                     <div class="card">
                         <span class="fa fa-google-plus" Color="red"></span><br>
                         <button class="connect">Connect</button>
@@ -80,9 +81,47 @@
             </div>
             <div id="pay" class="part">
                 <h1>Payment method</h1>
-                <div class="field">
+
+                    <div class="payment-way">
+                        <h3>Debit Card/Credit Card</h3>
+                        
                     
-                </div>
+                             <div class="form-container">
+                                 <form action="add" class="full" method="post">
+                                    <input type="number" width="auto" name="number" placeholder="Card Number">
+                                    <input type="number" width="auto" name="cvv" placeholder="Cvv">
+                                    <input type="number" width="auto" name="month" placeholder="month">
+                                    <input type="number" width="auto" name="year" placeholder="year">
+                                    <button type="submit">Add</button>
+                                </form>
+                             </div>
+                            <div class="form-container" ng-repeat="x in card">
+                                <form class="full" action="add" method="post">
+                                <input name="number" width="auto" disabled="true" value="{{x.number}}">
+                                <input name="cvv" width="auto" disabled="true" value="{{x.cvv}}">
+                                <input name="month" width="auto" disabled="true" value="{{x.month}}">
+                                <input name="year" width="auto" disabled="true" value="{{x.year}}">
+                                <button type="submit">Remove</button>
+                                </form>
+                             </div>
+                       
+                    </div>
+                    
+                    <div class="payment-way">
+                            <h3>Pay Pal</h3>
+                    
+                        <div class="form-container">
+                            
+                            <p>This payment method will be stored and associated with your <i><b>Ailmax</b></i> account for future purchases.
+                                <br>
+You will be directed to PayPal to authorize your payment method, then you will be returned to <i><b>Ailmax</b></i> to complete this purchase.</p>
+                            <div class="full">
+                                <form action="paypal" method="post">
+                                <button type="submit">Add PAYPAL </button>
+                            </form></div>
+                        </div>
+                    </div>
+                
             </div>
             <div id="tran" class="part">
                 <h1>Account Transaction</h1>
@@ -90,10 +129,61 @@
             
             <div id="sec" class="part">
                 <h1>Security Settings</h1>
+                <div class="form-container">
+                    <h2>Change Password</h2>
+                    <form action="pass" method="post" class="full">
+                        <input type="password" width="more-half" name="current" placeholder="Current Password">
+                        <input type="password" width="half" name="current" placeholder="New Password">
+                        <input type="password" width="half" name="current" placeholder="confirm New Password">
+                        <button type="submit">Update</button>
+                        <button type="reset">Cancel</button>
+                    </form>
+                </div>
+                <div class="form-container">
+                    <h2>Delete your account</h2>
+                    <form action="del" method="get" class="full">
+                        <p>Start the process of deleting your <b><i>Ailmax</i></b> account including all purchases, Product key and Licence permanently</p>
+                        <p class="note">This action is irreversible once completed.</p>
+                        <button type="delete">Delete Account</button>                       
+                    </form>
+ 
+                </div>
+                <div class="form-container">
+                    <h2>E-Mail Authentication</h2>
+                    <form action="authanticate" method="get" class="full">
+                        <p>Use a security code that will be sent to the email address associated with your account when you sign in as your Two-Factor Authentication (2FA).</p>
+                        <button type="submit">Enable E-Mail authentication</button>                       
+                    </form>
+                </div>
+                
             </div>
             </div>
-        </div>
+        
        <script src="Js/jquery-3.4.1.js"></script>
+       <script>
+           var app = angular.module('user-data', []);
+app.controller('userCtrl', function($scope){
+    $scope.image="Pic/User/male_avatar.png";
+    $scope.name="Ayush Maan";
+    $scope.email="ayushjain1133@gmail.com";
+    
+    $scope.phone="";
+    $scope.address="";
+    $scope.region="";
+    $scope.state="";
+    $scope.city="";
+    $scope.Pin="";
+    
+    $scope.card=[
+        {
+            number:"123456789",
+            cvv:"1234",
+            month:"12",
+            year:"2015"
+        }
+    ];
+});
+       </script>
         <script src="Js/Account/main.js"></script>
     </body>
 
