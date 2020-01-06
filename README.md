@@ -20,9 +20,6 @@ Every data related to product such as price, name, image is contained in angular
 - [x] home page layout have completed and responsive as well
 - [x] complete ID (Sign In & Sign Up) page
 - [x] user account
-  - [x] Basic Layout
-  - [x] User Account detais.
-  - [x] Responsive Layout. 
 - [ ] Product page
   - [ ] Main design
 
@@ -35,7 +32,9 @@ you can see my web page below §
 - [Home page](https://ayushmaanjain.github.io/e-commerce/)
 - [Sign-In page](https://ayushmaanjain.github.io/e-commerce/ID.html?login)
 - [Sign-Up page](https://ayushmaanjain.github.io/e-commerce/ID.html?register)
-- [User-Account page](https://ayushmaanjain.github.io/e-commerce/account.html)
+- [User-Account setting page](https://ayushmaanjain.github.io/e-commerce/account.html?user)
+- [User-Account cart page](https://ayushmaanjain.github.io/e-commerce/account.html?cart)
+- [User-Account transection/purchases page](https://ayushmaanjain.github.io/e-commerce/account.html?tran)
 
 ***Please suggest me any improvement or any change.***
 
