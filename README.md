@@ -34,7 +34,7 @@ you can see my web page below §
 - [Sign-Up page](https://ayushmaanjain.github.io/e-commerce/ID.html?register)
 - [User-Account setting page](https://ayushmaanjain.github.io/e-commerce/account.html?user)
 - [User-Account cart page](https://ayushmaanjain.github.io/e-commerce/account.html?cart)
-- [User-Account transection/purchases page](https://ayushmaanjain.github.io/e-commerce/account.html?tran)
+- [User-Account transection/purchases page](https://ayushmaanjain.github.io/e-commerce/account.html?transection)
 
 ***Please suggest me any improvement or any change.***
 
