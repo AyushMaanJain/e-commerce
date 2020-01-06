@@ -140,13 +140,13 @@ input:focus{outline: none;}
     border-radius:7px;
 }
 
-.side-one li[state="active"]{
+.hidable li[state="active"]{
      background:linear-gradient(90deg,#33b5e5,#55bfef,white);
     border:1px solid;
     border-color:transparent white transparent #25a5d5;
     
 }
-.side-one li[state="inactive"]{
+.hidable li[state="inactive"]{
  background: #33b5e5;
     border:0.5px solid #25a5d5;
     
@@ -210,6 +210,69 @@ span[Color="cyan-blue"]{
 span[Color="Lblue"]{
     background:#29d;
 }
+.form-container input{
+border:none;
+background: #eee;
+font-weight: 700;
+padding: 10px;
+border-radius: 5px;
+}
+.form-container button[type="submit"]{
+border:none;
+background: #5fae05;
+color: #fff;
+font-weight: 500;
+padding:10px 15px;
+border-radius: 5px;
+}
+.form-container button[type="delete"]{
+border:none;
+background: #aa002d;
+color:#fff;
+font-weight: 700;
+font-style: italic;
+padding:10px 15px;
+border-radius: 5px;    
+}
+.form-container button[type="reset"]{
+border:none;
+background: #555;
+color: #fff;
+font-weight: 500;
+padding:10px 15px;
+border-radius: 5px;
+}
+.card{
+    border:none;
+    box-shadow: 0px 0px 3px;
+    border-radius: 10px;
+    
+}
+.card span{
+    border-radius:10px;
+    color: #fff;
+}
+.card button{
+    border: none;
+    border-radius:5px;
+    background-color: #555;
+    color: #fff;
+}
+.payment-way{
+    background: #ddd;
+    border-radius: 10px;
+}
+.form-container .note{
+    color: #b52535;
+}
+.part table tr{
+    box-shadow: 0px 0px 3px #888;
+    border-radius: 5px;
+}
+.slidable li span.icon{
+       
+        border-radius: 0px 20px 20px 0px;
+    }
 
 .bottom .text a{
     text-decoration: none;
@@ -231,6 +294,15 @@ span[Color="Lblue"]{
         background: #93c;
         
     }
+[span-color="green"] span{
+    background: #3c3;
+}
+[span-color="blue"] span{
+    background: #33c;
+}
+[span-color="red"] span{
+    background: #c33;
+}
     .searchCon .fa-arrow-left{
         background:none;
         color: #fff;}

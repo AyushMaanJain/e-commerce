@@ -9,24 +9,26 @@
         <link rel="stylesheet" href="fonts/fonts setup.css" type="text/css"/>
         <script src="Js/Angular.js"></script>
     </head>
-    <body ng-app="user-data" ng-controller="userCtrl" id="userCtrl" style="overflow-x: hidden;background: #25a5d5">
+    <body ng-app="user-data" ng-controller="userCtrl" id="userCtrl" style="overflow-x:hidden;background: #25a5d5">
         <div class="head">
             <img src="{{image}}"/>
             <p class="uname">{{name}}</p>
             <div class="side-one">
-                <ul>
-                    <li id="li1" state="active"><a href="#gen">General</a></li>
-                    <li id="li2" state="inactive"><a href="#link">Linked Account</a></li>
-                    <li id="li3" state="inactive"><a href="#cart">Cart</a></li>
-                    <li id="li4" state="inactive"><a href="#pay">Payments</a></li>
-                    <li id="li5" state="inactive"><a href="#tran">Transactions</a></li>
-                    <li id="li6" state="inactive"><a href="#sec">Security</a></li>
+                <ul class="hidable">
+                    <li id="li1" state="inactive"><a href="?user#gen">General</a></li>
+                    <li id="li2" state="inactive"><a href="?user#link">Linked Account</a></li>
+                    <li id="li3" state="inactive"><a href="?user#pay">Payments</a></li>
+                    <li id="li4" state="inactive"><a href="?user#sec">Security</a></li>
+                </ul>
+                <ul class="fa slidable">
+                    <li class="for-mobile"><a href="?user" span-color="red"><span class="icon fa-user-circle"></span><span class="text">User Setting</span></a></li>
+                    <li><a href="?cart" span-color="green"><span class="icon fa-cart-arrow-down"></span><span class="text">Cart</span></a></li>
+                    <li><a href="?transection" span-color="blue"><span class="icon fa-history"></span><span class="text">Transection</span></a></li>
                 </ul>
             </div>
         </div>
-         
-        <div class="body">
-            <div id="gen" class="part">
+        <div class="body" id="user">
+            <div class="part">
                 <h1>General Setting</h1>
                 <h2>User account</h2>
                 <div class="form-container">
@@ -76,9 +78,6 @@
                     </div>
                 </div>
             </div>
-            <div id="cart" class="part">
-                <h1>User Cart</h1>
-            </div>
             <div id="pay" class="part">
                 <h1>Payment method</h1>
 
@@ -123,10 +122,6 @@ You will be directed to PayPal to authorize your payment method, then you will b
                     </div>
                 
             </div>
-            <div id="tran" class="part">
-                <h1>Account Transaction</h1>
-            </div>
-            
             <div id="sec" class="part">
                 <h1>Security Settings</h1>
                 <div class="form-container">
@@ -157,7 +152,39 @@ You will be directed to PayPal to authorize your payment method, then you will b
                 </div>
                 
             </div>
+        </div>
+        <div class="body" id="cart">
+            <div class="part">
+                <h1>User Cart</h1>
+                <table>
+                    <tr class="cart">
+                        <td class="prod-name"><b>Product Name</b></td>
+                        <td class="prod-price"><b>Product Price</b></td>
+                    </tr>
+                    <tr class="cart" ng-repeat="x in cart">
+                        <td class="prod-name">{{x.name}}</td>
+                        <td class="prod-price">{{x.price}}</td>
+                    </tr>
+                </table>
             </div>
+        </div>
+        <div class="body" id="tran">
+            <div class="part">
+                <h1>User Purchases</h1>
+                <table>
+                    <tr class="tran">
+                        <td class="product-name"><b>Product Name</b></td>
+                        <td class="product-date"><b>Purchase Date</b></td>
+                        <td class="product-bill"><b>Receipt</b></td>
+                    </tr>
+                    <tr class="tran" ng-repeat="x in purchases">
+                        <td class="product-name">{{x.name}}</td>
+                        <td class="product-date">{{x.Date}}</td>
+                        <td class="product-bill"><a href="">{{x.Rec}}</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
         
        <script src="Js/jquery-3.4.1.js"></script>
        <script>
@@ -181,6 +208,15 @@ app.controller('userCtrl', function($scope){
             month:"12",
             year:"2015"
         }
+    ];
+    
+    $scope.cart=[
+        {name:"Sap ABAP",price:"1235"},
+        {name:"NetBeans",price:"Free"}
+    ];
+    $scope.purchases=[
+        {name:"nortron",Date:"25.dec.2017",Rec:".pdf"},
+        {name:"windows10 Product key",Date:"5.jun.2019",Rec:".pdf"}
     ];
 });
        </script>
