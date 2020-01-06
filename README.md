@@ -15,6 +15,13 @@ General Product desplay style, in another words
 
 Every data related to product as well as user such as price, name, cart, purchases, image is contained in angular js system to make it more compatible for android app
 
+user account header part works as per scroll take place, image size of header changes and shift to right as similar as scroll down.
+
+user account containt 3 different parts
+- user Setting(includes user general informations, account setting, payment settings,linked account).
+- user Cart(a wish-list of product which consumer wanted to purchase, it includes name and price of product).
+- user Purchases(records  of all purchases of user,includes name,date of purchase,reciept of purchase).
+
 # About work and achievement
 
 - [x] home page layout have completed and responsive as well
