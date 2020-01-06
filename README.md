@@ -24,7 +24,7 @@ Every data related to product as well as user such as price, name, cart, purchas
   - [ ] Main design
 
 ## preview of web page
-you can see my web page below §
+you can see my web page below :
 - [Home page](https://ayushmaanjain.github.io/e-commerce/)
 - [Sign-In page](https://ayushmaanjain.github.io/e-commerce/ID.html?login)
 - [Sign-Up page](https://ayushmaanjain.github.io/e-commerce/ID.html?register)
