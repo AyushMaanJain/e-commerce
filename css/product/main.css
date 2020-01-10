@@ -1,0 +1,88 @@
+body{
+    margin:0;
+}
+.topimg{
+    float: left;
+    width: 40%;
+    padding:0px 30%;
+}
+.header{
+    margin-top: -80px;
+    width: 100%;
+    float: left;
+    left:0;
+    top:0;
+    background:rgba(153,51,204,0.01);
+}
+.fix-head{
+    margin-top: 0px;
+    position: fixed;
+    top:0;
+}
+
+.header .head{
+    float: left;
+    width:900px;
+    }
+.header .head h3,
+.header .head img{
+    
+    float: left;}
+
+.header .head h3{
+margin-top: 35px;
+}
+.header .head img{
+    margin: 20px;
+    border:0.5px solid grey;
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    
+}
+
+.header .head .fixed-container{
+    width: 300px;
+    float: right;
+    margin-right:10px;
+    margin-top:95px;/*minimum margin is 25px;*/
+    margin-bottom: 25px;
+}
+.header .head form{
+    float: right;
+    margin-right: 20px;
+}
+.header .head form button{
+padding: 10px;
+border:none;
+border-radius: 5px;
+}
+[display="none"]{
+    display:none;
+}
+
+@media (max-width:900px){
+    .header .head{
+        width: 100%;
+    }
+    .header{
+    margin-top: 0px;
+    }
+    .topimg{
+        width: 60%;
+        height: 50vw;
+        padding: 0 20vw;
+    }
+    
+}
+@media (max-width:544px){
+    
+    .topimg{
+        width: 90%;
+        height: 60vw;
+        padding: 0 5%;
+    }
+    .header .head .fixed-container{
+        margin-top: 25px;
+    }
+}

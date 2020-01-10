@@ -117,6 +117,20 @@ input:focus{outline: none;}
     color:#fff;
 }
 
+.fixed-container form[target="buy"] button{
+    background: #5c3;
+    color: #FFF;
+    font-weight: 600;
+}
+.fixed-container form[target="Addcart"] button{
+    background: #5c0;
+    color: #fff;
+}
+.header .head h3{
+    color: #FFF;
+    font-family: sans-serif;
+    font-style: oblique;
+}
 
 .horizontal-list{
     background: transparent;
