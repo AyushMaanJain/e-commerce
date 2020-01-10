@@ -22,13 +22,19 @@ user account containt 3 different parts
 - user Cart(a wish-list of product which consumer wanted to purchase, it includes name and price of product).
 - user Purchases(records  of all purchases of user,includes name,date of purchase,reciept of purchase).
 
+product Account header part is kind of sticky header its image Style and header portion is inspired by [microsoft Store product page](https://www.microsoft.com/en-in/p/minecraft-for-windows-10-starter-collection/9n4km90ctzt6?activetab=pivot:overviewtab)
+
+Product page only shows *windows10* as sample until completition of UI (product page look). 
+
 # About work and achievement
 
 - [x] home page layout have completed and responsive as well
 - [x] complete ID (Sign In & Sign Up) page
 - [x] user account
 - [ ] Product page
-  - [ ] Main design
+  - [x] Main design
+  - [ ] Images Grid
+  - [ ] function and requirements(list)
 
 ## preview of web page
 you can see my web page below :
