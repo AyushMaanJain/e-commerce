@@ -60,6 +60,11 @@ border-radius: 5px;
 [display="none"]{
     display:none;
 }
+.body p{font-size:18px;}
+.body{
+    font-family: sans-serif;
+    padding: 10px; 
+}
 
 @media (max-width:900px){
     .header .head{

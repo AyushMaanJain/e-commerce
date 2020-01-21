@@ -11,7 +11,7 @@
         <script src="Js/Angular.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body style="overflow-x: hidden">
+    <body style="overflow-x:hidden">
         <nav class="head">
             <Button class="slideToggle">&#9776;</Button>
         <span class="Pname"><a href="#">Ailmax</a></span>
@@ -50,7 +50,7 @@
             <a href="#">Others</a>
             
         </div>
-        <div class="home" ng-app="Home_pg" ng-controller="ControllA">
+        <div class="body" ng-app="Home_pg" ng-controller="ControllA">
             <div class="carousel_container">
                 <div class="image">
                     <div id="picA" active="true" class="carousel_picture">
@@ -77,6 +77,7 @@
                         <h1>{{offer[0].name}}</h1>
                         <p>{{offer[0].data}}</p>
                         <a href="#">See more information &rarr;</a>
+                        
                     </div>
                     <div id="textB" active="false" class="carousel_text">
                         <h1>{{offer[1].name}}</h1>
@@ -95,59 +96,119 @@
                 <h2>Latest</h2>
                 <div class="cards">
                     <div class="card cardA">
+                    <div class="sub-card" href="Product.html?{{latest[0].name}}">
                         <img src="{{latest[0].img}}" style="margin-bottom: 8px;">
                         <h3>{{latest[0].name}}</h3>
                         <h3>{{latest[0].price}}</h3>
                     </div>
+                        <form target="addcart" method="post">
+                            <input type="hidden" value="{{latest[0].name}}" name="product"/>
+                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
+                        </form>
+                    </div>
                     <div class="card cardB">
+                    <div class="sub-card" href="Product.html?{{latest[1].name}}">
                         <img src="{{latest[1].img}}">
                         <h3>{{latest[1].name}}</h3>
                         <h3>{{latest[1].price}}</h3>
                     </div>
+                        <form target="addcart" method="post">
+                            <input type="hidden" value="{{latest[1].name}}" name="product"/>
+                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
+                        </form>
+                    </div>
                     <div class="card cardC">
+                    <div class="sub-card" href="Product.html?{{latest[2].name}}">
                         <img src="{{latest[2].img}}">
                         <h3>{{latest[2].name}}</h3>
                         <h3>{{latest[2].price}}</h3>
                     </div>
+                        <form target="addcart" method="post">
+                            <input type="hidden" value="{{latest[2].name}}" name="product"/>
+                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
+                        </form>
+                    </div>
                     <div class="card cardD">
+                    <div class="sub-card" href="Product.html?{{latest[3].name}}">
                         <img src="{{latest[3].img}}">
                         <h3>{{latest[3].name}}</h3>
                         <h3>{{latest[3].price}}</h3>
                     </div>
+                        <form target="addcart" method="post">
+                            <input type="hidden" value="{{latest[3].name}}" name="product"/>
+                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
+                        </form>
+                    </div>
                     <div class="card cardE">
+                    <div class="sub-card" href="Product.html?{{latest[4].name}}">
                         <img src="{{latest[4].img}}">
                         <h3>{{latest[4].name}}</h3>
                         <h3>{{latest[4].price}}</h3>
+                    </div>
+                        <form target="addcart" method="post">
+                            <input type="hidden" value="{{latest[4].name}}" name="product"/>
+                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
+                        </form>
                     </div>
                 </div>
             </div>
             <div class="horizontal-list">
                 <h2>Top Paid</h2>
-                <div class="cards">
+                    <div class="cards">
                     <div class="card cardA">
-                        <img src="{{paid[0].img}}" style="">
+                    <div class="sub-card" href="Product.html?{{paid[0].name}}">
+                        <img src="{{paid[0].img}}" style="margin-bottom: 8px;">
                         <h3>{{paid[0].name}}</h3>
                         <h3>{{paid[0].price}}</h3>
                     </div>
+                        <form target="addcart" method="post">
+                            <input type="hidden" value="{{paid[0].name}}" name="product"/>
+                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
+                        </form>
+                    </div>
                     <div class="card cardB">
+                    <div class="sub-card" href="Product.html?{{paid[1].name}}">
                         <img src="{{paid[1].img}}">
                         <h3>{{paid[1].name}}</h3>
                         <h3>{{paid[1].price}}</h3>
                     </div>
+                        <form target="addcart" method="post">
+                            <input type="hidden" value="{{paid[1].name}}" name="product"/>
+                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
+                        </form>
+                    </div>
                     <div class="card cardC">
+                    <div class="sub-card" href="Product.html?{{paid[2].name}}">
                         <img src="{{paid[2].img}}">
                         <h3>{{paid[2].name}}</h3>
                         <h3>{{paid[2].price}}</h3>
                     </div>
+                        <form target="addcart" method="post">
+                            <input type="hidden" value="{{paid[2].name}}" name="product"/>
+                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
+                        </form>
+                    </div>
                     <div class="card cardD">
+                    <div class="sub-card" href="Product.html?{{paid[3].name}}">
                         <img src="{{paid[3].img}}">
                         <h3>{{paid[3].name}}</h3>
                         <h3>{{paid[3].price}}</h3>
                     </div>
+                        <form target="addcart" method="post">
+                            <input type="hidden" value="{{paid[3].name}}" name="product"/>
+                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
+                        </form>
+                    </div>
                     <div class="card cardE">
+                    <div class="sub-card" href="Product.html?{{paid[4].name}}">
                         <img src="{{paid[4].img}}">
                         <h3>{{paid[4].name}}</h3>
                         <h3>{{paid[4].price}}</h3>
+                    </div>
+                        <form target="addcart" method="post">
+                            <input type="hidden" value="{{paid[4].name}}" name="product"/>
+                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -155,29 +216,59 @@
                 <h2>Top Free</h2>
                 <div class="cards">
                     <div class="card cardA">
-                        <img src="{{free[0].img}}" style="">
+                    <div class="sub-card" href="Product.html?{{free[0].name}}">
+                        <img src="{{free[0].img}}" style="margin-bottom: 8px;">
                         <h3>{{free[0].name}}</h3>
                         <h3>{{free[0].price}}</h3>
                     </div>
+                        <form target="addcart" method="post">
+                            <input type="hidden" value="{{free[0].name}}" name="product"/>
+                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
+                        </form>
+                    </div>
                     <div class="card cardB">
+                    <div class="sub-card" href="Product.html?{{free[1].name}}">
                         <img src="{{free[1].img}}">
                         <h3>{{free[1].name}}</h3>
                         <h3>{{free[1].price}}</h3>
                     </div>
+                        <form target="addcart" method="post">
+                            <input type="hidden" value="{{free[1].name}}" name="product"/>
+                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
+                        </form>
+                    </div>
                     <div class="card cardC">
+                    <div class="sub-card" href="Product.html?{{free[2].name}}">
                         <img src="{{free[2].img}}">
                         <h3>{{free[2].name}}</h3>
                         <h3>{{free[2].price}}</h3>
                     </div>
+                        <form target="addcart" method="post">
+                            <input type="hidden" value="{{free[2].name}}" name="product"/>
+                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
+                        </form>
+                    </div>
                     <div class="card cardD">
+                    <div class="sub-card" href="Product.html?{{free[3].name}}">
                         <img src="{{free[3].img}}">
                         <h3>{{free[3].name}}</h3>
                         <h3>{{free[3].price}}</h3>
                     </div>
+                        <form target="addcart" method="post">
+                            <input type="hidden" value="{{free[3].name}}" name="product"/>
+                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
+                        </form>
+                    </div>
                     <div class="card cardE">
-                        <img src="{{free[4].img}}" style="margin-bottom: -7px;">
+                    <div class="sub-card" href="Product.html?{{free[4].name}}">
+                        <img src="{{free[4].img}}">
                         <h3>{{free[4].name}}</h3>
                         <h3>{{free[4].price}}</h3>
+                    </div>
+                        <form target="addcart" method="post">
+                            <input type="hidden" value="{{free[4].name}}" name="product"/>
+                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -195,6 +286,7 @@
                  <h3>Consumer Support</h3>
                  <div class="text">
                      <ul>
+                         
                          <li> <a href="#">Contact Us</a></li>
                          <li><a href="#">Transaction issue</a></li>
                  <li><a href="#">Problem with Product/License</a></li>
@@ -221,9 +313,9 @@ app.controller('ControllA', function($scope) {
       {name:"Adobe Illustrator",img:"Pic/Adobe illustrator.png",price:"\u20B9"+"2 300"}
   ];
   $scope.paid = [
-      {name:"MAC",          img:"Pic/MacOS.png",       price:"\u20B9"+"2 000"},
+      {name:"MacOS",        img:"Pic/MacOS.png",       price:"\u20B9"+"2 000"},
       {name:"Maya",         img:"Pic/Maya.jpg",        price:"\u20B9"+"11 000"},
-      {name:"Unity",        img:"Pic/Unity.jpg",       price:"\u20B9"+"8 875"},
+      {name:"Unity",        img:"Pic/unity.jpg",       price:"\u20B9"+"8 875"},
       {name:"Norton",       img:"Pic/Norton.jpg",      price:"\u20B9"+"3 500"},
       {name:"Visual Studio",img:"Pic/VisualStudio.png",price:"\u20B9"+"3 195"}
   ];
