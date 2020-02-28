@@ -1,6 +1,6 @@
 $(document).ready(function(){
-     var url=window.location.href;
-    if(url.toString().includes("?user")){
+     
+    /*if(url.toString().includes("?user")){
         $("#cart").css("display","none");
         $("#tran").css("display","none");
         $("#user").css("display","block");
@@ -14,7 +14,7 @@ $(document).ready(function(){
         $("#cart").css("display","none");
         $("#tran").css("display","block");
         $("#user").css("display","none");
-    }
+    }*/
     
     var w=window.innerWidth; 
     var minSize=0;
@@ -28,7 +28,7 @@ $(document).ready(function(){
     var paymentWay=0;
 if(w>992){
     bodypadding=20/100*w;
-    bodywidth=w-160;
+    bodywidth=w-175;
     halfFormSize=(bodywidth-40)/2;
     minSize=8;
     maxSize=20;
@@ -79,11 +79,7 @@ if(w<=768){
 {$(".body").css("width",bodywidth+"px");
 $(".body").css("padding-top",bodypadding+10+"px");
 $(".part").css("width",bodywidth-40+"px");
-$(".prod-name").css("width",(bodywidth-40-20)*2/3+"px");
-$(".product-name").css("width",(bodywidth-40-20)*2/4+"px");
-$(".prod-price").css("width",(bodywidth-40-20)*1/3+"px");
-$(".product-date").css("width",(bodywidth-40-20)*1/4+"px");
-$(".product-bill").css("width",(bodywidth-40-20)*1/4+"px");
+
 $(".payment-way").css("width",(bodywidth-paymentWay)+"px");
 $(".half-input").css("width",halfFormSize-40-55+"px");}
 
@@ -177,11 +173,7 @@ if(w<=768){
 {$(".body").css("width",bodywidth+"px");
 $(".body").css("padding-top",bodypadding+10+"px");
 $(".part").css("width",bodywidth-40+"px");
-$(".prod-name").css("width",bodywidth-40-40-120+"px");
-$(".product-name").css("width",bodywidth-40-40-320+"px");
-$(".prod-price").css("width",100+"px");
-$(".product-date").css("width",200+"px");
-$(".product-bill").css("width",100+"px");
+
 $(".payment-way").css("width",(bodywidth-paymentWay)+"px");
 $(".half-input").css("width",halfFormSize-40-55+"px");}
 });

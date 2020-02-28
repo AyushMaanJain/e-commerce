@@ -10,6 +10,9 @@
         <meta charset="UTF-8">
         <script src="Js/Angular.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .card img{}
+        </style>
     </head>
     <body style="overflow-x:hidden">
         <nav class="head">
@@ -33,7 +36,7 @@
         </nav>
        
         <div class="slidenav" style="overflow: scroll" expand="false">
-            <span>Price </span>
+            
             <a href="#">Free</a>
             <a href="#">Paid</a>
             <span>Value  </span>
@@ -286,10 +289,9 @@
                  <h3>Consumer Support</h3>
                  <div class="text">
                      <ul>
-                         
-                         <li> <a href="#">Contact Us</a></li>
-                         <li><a href="#">Transaction issue</a></li>
-                 <li><a href="#">Problem with Product/License</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Transaction issue</a></li>
+                        <li><a href="#">Problem with Product/License</a></li>
                      </ul>
                  </div>
                  </div>
@@ -306,25 +308,25 @@ app.controller('ControllA', function($scope) {
       {name:"Windows 10",img:"Pic/windows10.jpg",data:"getting 50% discount on Product-key"}
   ];
   $scope.latest = [
-      {name:"Gambas",           img:"Pic/Gambas.png",           price:"Free"},
-      {name:"Sap",              img:"Pic/sap-logo.png",         price:"\u20B9"+"49 324 "},
-      {name:"QuickHeal",        img:"Pic/QuickHeal.png",        price:"\u20B9"+"1 909"},
-      {name:"Coral Draw",       img:"Pic/CoralDraw.jpg",        price:"\u20B9"+"55 000"},
-      {name:"Adobe Illustrator",img:"Pic/Adobe illustrator.png",price:"\u20B9"+"2 300"}
+      {name:"Gambas",           img:"Pic/icons/Gambas.png",           price:"Free"},
+      {name:"Sap",              img:"Pic/icons/sap-logo.png",         price:"\u20B9"+"49 324 "},
+      {name:"QuickHeal",        img:"Pic/icons/QuickHeal.png",        price:"\u20B9"+"1 909"},
+      {name:"Coral Draw",       img:"Pic/icons/CoralDraw.jpg",        price:"\u20B9"+"55 000"},
+      {name:"Adobe Illustrator",img:"Pic/icons/Adobe illustrator.png",price:"\u20B9"+"2 300"}
   ];
   $scope.paid = [
-      {name:"MacOS",        img:"Pic/MacOS.png",       price:"\u20B9"+"2 000"},
-      {name:"Maya",         img:"Pic/Maya.jpg",        price:"\u20B9"+"11 000"},
-      {name:"Unity",        img:"Pic/unity.jpg",       price:"\u20B9"+"8 875"},
-      {name:"Norton",       img:"Pic/Norton.jpg",      price:"\u20B9"+"3 500"},
-      {name:"Visual Studio",img:"Pic/VisualStudio.png",price:"\u20B9"+"3 195"}
+      {name:"MacOS",        img:"Pic/icons/MacOS.png",       price:"\u20B9"+"2 000"},
+      {name:"Maya",         img:"Pic/icons/Maya.jpg",        price:"\u20B9"+"11 000"},
+      {name:"Unity",        img:"Pic/icons/unity.jpg",       price:"\u20B9"+"8 875"},
+      {name:"Norton",       img:"Pic/icons/Norton.jpg",      price:"\u20B9"+"3 500"},
+      {name:"Visual Studio",img:"Pic/icons/VisualStudio.png",price:"\u20B9"+"3 195"}
   ];
   $scope.free = [
-      {name:"MySQL",         img:"Pic/mysql.jpg",         price:"Free"},
-      {name:"Blender",       img:"Pic/Blender.jpg",       price:"Free"},
-      {name:"zip Book",      img:"Pic/zipBooks.png",      price:"Free"},
-      {name:"Avira",         img:"Pic/avira.png",         price:"Free"},
-      {name:"Android Studio",img:"Pic/Android Studio.png",price:"Free"}
+      {name:"MySQL",         img:"Pic/icons/mysql.jpg",         price:"Free"},
+      {name:"Blender",       img:"Pic/icons/blender.jpg",       price:"Free"},
+      {name:"zip Book",      img:"Pic/icons/zipBooks.png",      price:"Free"},
+      {name:"Avira",         img:"Pic/icons/avira.png",         price:"Free"},
+      {name:"Android Studio",img:"Pic/icons/Android Studio.png",price:"Free"}
   ];
   //end data
 });

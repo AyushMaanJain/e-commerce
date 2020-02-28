@@ -1,5 +1,25 @@
-.head{
-    background:#93c;}
+.head{ background:#9933cc;}
+
+/*customised theme of scroll bar*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+  background: #e2e2e2; 
+  border-radius:10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #eee; 
+  box-shadow:0px 0px 2px;
+}
+/*customised theme of scroll bar*/
+
+.head img{
+     border-radius:20vw;
+}
 .Pname a{color: #fff; text-decoration:none;}
 .Pname a:hover{color: #fff; text-shadow:0px 0px 4px #bbb ;}
 .options a{
@@ -34,16 +54,18 @@ color:#fff;
     text-decoration: none;
 }
 .slidenav{
-    background: #93c;
+    background: #33b5e5;
 }
 .slidenav a:hover{
     color: #fff;
-    padding-left:40px;
-    text-shadow:-8px -4px 3px #222;
+    background:linear-gradient(90deg,#33b5e5,#09c,#09c,#09c);
+    border-radius:0px 20px 20px 0px;
+    text-shadow:0px 0px 3px #0be;
 }
 .slidenav a{
     padding-left:0px;
     color: #fff;
+    background:linear-gradient(90deg,#33b5e5,#33b5e5,#33b5e5,#33b5e5);
     font-family: sans-serif;
     text-decoration: none;
   font-size: 25px;
@@ -59,9 +81,6 @@ background: #280069;
 .slidenav span{
     color:transparent;
 }
-.home,.body{
-    background:#505;
-}
 .body .form{
     background: #fff;
     border-radius: 10px;
@@ -69,7 +88,7 @@ background: #280069;
 }
 .body .form h2{
     font-family: sans-serif;
-    color: #509;
+    color: #00a5c5;
     text-align: center;
 }
 .outer button{
@@ -99,23 +118,24 @@ letter-spacing:1px;
 #register form button,#Login form button{
      border: none;
    border-radius:5px;
-background:#709;
+background:#33b5e5;
 color:#fff;
 font-weight:bold; 
 }
 #register form button:hover,#Login form button:hover{
 
-    background:#505;
+    background:#09c;
 }
 #register form a,#Login form a{
-    color: #83a;
+    color: #3ae;
     text-decoration: none;
     font-family: sans-serif;
     font-weight: bolder;
+    transition: 0.3s;
 }
 
 #register form a:hover,#Login form a:hover{
-    
+    color: #38a;
     text-decoration: underline;
 }
 input:focus{outline: none;}
@@ -176,7 +196,7 @@ input:focus{outline: none;}
 }
 
 .bottom{
-        background:#222;
+        background:linear-gradient(#118595,#118595,#22a5d5,#33b5e5);
         color: #fff;
 }
 .bottom h3{
@@ -190,6 +210,16 @@ input:focus{outline: none;}
 .bottom .fa a span{
     padding:10px;
     border-radius:15px;
+}
+.bottom .text a{
+    text-decoration: none;
+    color: #f5f5f5;
+    transition: 0.3s;
+    font-weight:600;
+}
+.bottom .text a:hover{
+    color: #fff;
+    
 }
 span[onColor="red"]:hover{
     background:#d22;
@@ -285,30 +315,37 @@ border-radius: 5px;
 .form-container .note{
     color: #b52535;
 }
-.part table tr{
-    box-shadow: 0px 0px 3px #888;
-    border-radius: 5px;
+.part ul li.lhead{
+    box-shadow: 0px 0px 2px;
+    border-radius: 12px 12px 5px 5px;
+}
+.part ul li.lbody{
+    box-shadow: 0px 0px 2px;
+    border-radius: 5px 5px 5px 5px;
+}
+.part ul li.lfoot{
+    box-shadow: 0px 0px 2px;
+    border-radius: 5px 5px 12px 12px;
+}
+.fa-close{
+    color: #d00;
+}
+.fa-close:hover{
+    color: #f22;
 }
 .slidable li span.icon{
        
         border-radius: 0px 20px 20px 0px;
     }
 
-.bottom .text a{
-    text-decoration: none;
-    color: #ccc;
-}
-.bottom .text a:hover{
-    color: #fff;
-}
 
 body{
    
-    background-image: url('https://ayushmaanjain.github.io/e-commerce/Pic/products/bg.jpeg');
+    background-image: url('http://localhost:8383/HTML5ApplicationManual/Pic/products/bg.jpeg');
     background-size:100%;
     
 }
-.body{background: rgba(255,255,255,0.94);}
+.body{background: rgba(255,255,255,0.84);}
 
 @media (max-width:768px){
     .popbase{
@@ -320,6 +357,12 @@ body{
         background: #93c;
         
     }
+    
+    .slidenav a:hover{
+    background:linear-gradient(90deg,#33b5e5,#09c,#09c,#09c,#33b5e5);
+    border-radius:0px 0px 0px 0px;
+    }
+    
 [span-color="green"] span{
     background: #3c3;
 }

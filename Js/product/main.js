@@ -31,7 +31,6 @@ $(".body").css("padding-top",firstHead+200+"px");
     $(".fixed-container").css("margin-top",25+headerHeight+"px");
     $(".header").removeClass("fix-head");
     $(".header").css("background","rgba(153,51,204,"+scrollForHead+")");
-    
   }
   
 });
