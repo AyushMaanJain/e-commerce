@@ -20,15 +20,16 @@
         <span class="Pname"><a href="#">Ailmax</a></span>
         <nav class="options" display='none'>
             <nav class="popbase">
-                <a href="ID.html?login" class="fa fa-sign-in"><span style="">sign in</span></a>
-            <a href="ID.html?register" class="fa fa-user-circle-o"><span>sign up</span></a>
+                <a href="account.html" class="fa fa-user"><span style="">User</span></a>
+                <a href="Activity.html#cart" class="fa fa-cart-arrow-down"><span>cart</span></a>
+                <a href="ID.html?register" class="fa fa-sign-out"><span>Sign_out</span></a>
             </nav>
         </nav>
         <button class="popup fa fa-user"></button>
         <button class="searchToggle fa fa-search"></button>
         <div class="searchCon" display="none">
             <span class="back fa fa-arrow-left"></span>
-            <form method="get" action="filter" class="searchBox">
+            <form method="get" action="search.html" class="searchBox">
             <span class="fa fa-search"></span>
             <input type="text" name="search" placeholder="search..." autocomplete="off"/>
         </form>
@@ -56,225 +57,75 @@
         <div class="body" ng-app="Home_pg" ng-controller="ControllA">
             <div class="carousel_container">
                 <div class="image">
-                    <div id="picA" active="true" class="carousel_picture">
-                        <img src={{offer[0].img}} style="">
+                    <div ng-repeat="x in offer" id="pic{{$index+1}}" active="{{$first}}" class="carousel_picture">
+                        <img src={{x.img}} style="">
                     </div>
-                    <div id="picB" active="false" class="carousel_picture">
-                        <img src={{offer[1].img}} style="">
-                    </div>
-                    <div id="picC" active="false" class="carousel_picture">
-                         <img src={{offer[2].img}} style="">
-                    </div>
+                    
                 </div>
                 <div class="desc">
                 <div class="fa arrows">
                     <span id="shiftL" class="fa-arrow-left"></span>
                     <span id="shiftR" class="fa-arrow-right"></span>
                     <div class="dots">
-                        <span id="port3" class="circle" active="false"></span>
-                        <span id="port2" class="circle" active="false"></span>
-                        <span id="port1" class="circle" active="true"></span>
-                    </div>
-                </div>
-                    <div id="textA" active="true" class="carousel_text">
-                        <h1>{{offer[0].name}}</h1>
-                        <p>{{offer[0].data}}</p>
-                        <a href="#">See more information &rarr;</a>
+                        <span ng-repeat="x in offer" id="port{{offer.length-$index}}" class="circle" active="{{$last}}"></span>
                         
                     </div>
-                    <div id="textB" active="false" class="carousel_text">
-                        <h1>{{offer[1].name}}</h1>
-                        <p>{{offer[1].data}}</p>
+                </div>
+                    <div ng-repeat="x in offer" id="text{{$index+1}}" active="{{$first}}" class="carousel_text">
+                        <h1>{{x.name}}</h1>
+                        <p>{{x.data}}</p>
                         <a href="#">See more information &rarr;</a>
                     </div>
-                    <div id="textC" active="false" class="carousel_text">
-                        <h1>{{offer[2].name}}</h1>
-                        <p>{{offer[2].data}}</p>
-                        <a href="#">See more information &rarr;</a>
-                    </div>
+                    
             </div>
             </div>
          
             <div class="horizontal-list" style="">
                 <h2>Latest</h2>
                 <div class="cards">
-                    <div class="card cardA">
-                    <div class="sub-card" href="Product.html?{{latest[0].name}}">
-                        <img src="{{latest[0].img}}" style="margin-bottom: 8px;">
-                        <h3>{{latest[0].name}}</h3>
-                        <h3>{{latest[0].price}}</h3>
-                    </div>
-                        <form target="addcart" method="post">
-                            <input type="hidden" value="{{latest[0].name}}" name="product"/>
-                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
+                    <div ng-repeat="x in latest" class="card card{{$index}}">
+                        <img src="{{x.img}}">
+                        <h3>{{x.name}}</h3>
+                        <p>{{x.price}}</p>
+                        <form action="addCart" method="get">
+                            <input type="hidden" value="{{x.name}}"/>
+                            <button type="submit">Add to Cart</button>
                         </form>
                     </div>
-                    <div class="card cardB">
-                    <div class="sub-card" href="Product.html?{{latest[1].name}}">
-                        <img src="{{latest[1].img}}">
-                        <h3>{{latest[1].name}}</h3>
-                        <h3>{{latest[1].price}}</h3>
-                    </div>
-                        <form target="addcart" method="post">
-                            <input type="hidden" value="{{latest[1].name}}" name="product"/>
-                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
-                        </form>
-                    </div>
-                    <div class="card cardC">
-                    <div class="sub-card" href="Product.html?{{latest[2].name}}">
-                        <img src="{{latest[2].img}}">
-                        <h3>{{latest[2].name}}</h3>
-                        <h3>{{latest[2].price}}</h3>
-                    </div>
-                        <form target="addcart" method="post">
-                            <input type="hidden" value="{{latest[2].name}}" name="product"/>
-                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
-                        </form>
-                    </div>
-                    <div class="card cardD">
-                    <div class="sub-card" href="Product.html?{{latest[3].name}}">
-                        <img src="{{latest[3].img}}">
-                        <h3>{{latest[3].name}}</h3>
-                        <h3>{{latest[3].price}}</h3>
-                    </div>
-                        <form target="addcart" method="post">
-                            <input type="hidden" value="{{latest[3].name}}" name="product"/>
-                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
-                        </form>
-                    </div>
-                    <div class="card cardE">
-                    <div class="sub-card" href="Product.html?{{latest[4].name}}">
-                        <img src="{{latest[4].img}}">
-                        <h3>{{latest[4].name}}</h3>
-                        <h3>{{latest[4].price}}</h3>
-                    </div>
-                        <form target="addcart" method="post">
-                            <input type="hidden" value="{{latest[4].name}}" name="product"/>
-                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
-                        </form>
-                    </div>
+
                 </div>
             </div>
-            <div class="horizontal-list">
-                <h2>Top Paid</h2>
-                    <div class="cards">
-                    <div class="card cardA">
-                    <div class="sub-card" href="Product.html?{{paid[0].name}}">
-                        <img src="{{paid[0].img}}" style="margin-bottom: 8px;">
-                        <h3>{{paid[0].name}}</h3>
-                        <h3>{{paid[0].price}}</h3>
-                    </div>
-                        <form target="addcart" method="post">
-                            <input type="hidden" value="{{paid[0].name}}" name="product"/>
-                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
-                        </form>
-                    </div>
-                    <div class="card cardB">
-                    <div class="sub-card" href="Product.html?{{paid[1].name}}">
-                        <img src="{{paid[1].img}}">
-                        <h3>{{paid[1].name}}</h3>
-                        <h3>{{paid[1].price}}</h3>
-                    </div>
-                        <form target="addcart" method="post">
-                            <input type="hidden" value="{{paid[1].name}}" name="product"/>
-                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
-                        </form>
-                    </div>
-                    <div class="card cardC">
-                    <div class="sub-card" href="Product.html?{{paid[2].name}}">
-                        <img src="{{paid[2].img}}">
-                        <h3>{{paid[2].name}}</h3>
-                        <h3>{{paid[2].price}}</h3>
-                    </div>
-                        <form target="addcart" method="post">
-                            <input type="hidden" value="{{paid[2].name}}" name="product"/>
-                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
-                        </form>
-                    </div>
-                    <div class="card cardD">
-                    <div class="sub-card" href="Product.html?{{paid[3].name}}">
-                        <img src="{{paid[3].img}}">
-                        <h3>{{paid[3].name}}</h3>
-                        <h3>{{paid[3].price}}</h3>
-                    </div>
-                        <form target="addcart" method="post">
-                            <input type="hidden" value="{{paid[3].name}}" name="product"/>
-                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
-                        </form>
-                    </div>
-                    <div class="card cardE">
-                    <div class="sub-card" href="Product.html?{{paid[4].name}}">
-                        <img src="{{paid[4].img}}">
-                        <h3>{{paid[4].name}}</h3>
-                        <h3>{{paid[4].price}}</h3>
-                    </div>
-                        <form target="addcart" method="post">
-                            <input type="hidden" value="{{paid[4].name}}" name="product"/>
-                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="horizontal-list">
-                <h2>Top Free</h2>
+            <div class="horizontal-list" style="">
+                <h2>Latest</h2>
                 <div class="cards">
-                    <div class="card cardA">
-                    <div class="sub-card" href="Product.html?{{free[0].name}}">
-                        <img src="{{free[0].img}}" style="margin-bottom: 8px;">
-                        <h3>{{free[0].name}}</h3>
-                        <h3>{{free[0].price}}</h3>
-                    </div>
-                        <form target="addcart" method="post">
-                            <input type="hidden" value="{{free[0].name}}" name="product"/>
-                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
+                    <div ng-repeat="x in free" class="card">
+                        <img src="{{x.img}}">
+                        <h3>{{x.name}}</h3>
+                        <p>{{x.price}}</p>
+                        <form action="addCart" method="get">
+                            <input type="hidden" value="{{x.name}}"/>
+                            <button type="submit">Add to Cart</button>
                         </form>
                     </div>
-                    <div class="card cardB">
-                    <div class="sub-card" href="Product.html?{{free[1].name}}">
-                        <img src="{{free[1].img}}">
-                        <h3>{{free[1].name}}</h3>
-                        <h3>{{free[1].price}}</h3>
-                    </div>
-                        <form target="addcart" method="post">
-                            <input type="hidden" value="{{free[1].name}}" name="product"/>
-                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
-                        </form>
-                    </div>
-                    <div class="card cardC">
-                    <div class="sub-card" href="Product.html?{{free[2].name}}">
-                        <img src="{{free[2].img}}">
-                        <h3>{{free[2].name}}</h3>
-                        <h3>{{free[2].price}}</h3>
-                    </div>
-                        <form target="addcart" method="post">
-                            <input type="hidden" value="{{free[2].name}}" name="product"/>
-                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
-                        </form>
-                    </div>
-                    <div class="card cardD">
-                    <div class="sub-card" href="Product.html?{{free[3].name}}">
-                        <img src="{{free[3].img}}">
-                        <h3>{{free[3].name}}</h3>
-                        <h3>{{free[3].price}}</h3>
-                    </div>
-                        <form target="addcart" method="post">
-                            <input type="hidden" value="{{free[3].name}}" name="product"/>
-                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
-                        </form>
-                    </div>
-                    <div class="card cardE">
-                    <div class="sub-card" href="Product.html?{{free[4].name}}">
-                        <img src="{{free[4].img}}">
-                        <h3>{{free[4].name}}</h3>
-                        <h3>{{free[4].price}}</h3>
-                    </div>
-                        <form target="addcart" method="post">
-                            <input type="hidden" value="{{free[4].name}}" name="product"/>
-                            <button type="submit" class="fa fa-cart-plus">Add to cart</button>
-                        </form>
-                    </div>
+
                 </div>
             </div>
+            <div class="horizontal-list" style="">
+                <h2>Latest</h2>
+                <div class="cards">
+                    <div ng-repeat="x in paid" class="card">
+                        <img src="{{x.img}}">
+                        <h3>{{x.name}}</h3>
+                        <p>{{x.price}}</p>
+                        <form action="addCart" method="get">
+                            <input type="hidden" name="product" value="{{x.name}}"/>
+                            <button type="submit">Add to Cart</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+           
             
             <div class="bottom">
                 <h3>Follow Us on:</h3>
@@ -302,11 +153,14 @@
 var app = angular.module('Home_pg', []);
 app.controller('ControllA', function($scope) {
     //start data
+    
   $scope.offer = [
       {name:"Koding",    img:"Pic/koding.png",   data:"Now avilable in .msi extention"},
       {name:"Haudini",   img:"Pic/haudini.png",  data:"getting 20% discount on Licence"},
+      {name:"Dream Waver",   img:"Pic/dw.jpg",  data:"getting 90% discount"},
       {name:"Windows 10",img:"Pic/windows10.jpg",data:"getting 50% discount on Product-key"}
   ];
+  $scope.len=$scope.offer.length;
   $scope.latest = [
       {name:"Gambas",           img:"Pic/icons/Gambas.png",           price:"Free"},
       {name:"Sap",              img:"Pic/icons/sap-logo.png",         price:"\u20B9"+"49 324 "},

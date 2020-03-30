@@ -5,48 +5,43 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/account/main.css" type="text/css"/>
-        <link rel="stylesheet" href="css/theme.css" type="text/css"/>
+        <link rel="stylesheet" href="css/theme.css" type="text/css"/>    
         <link rel="stylesheet" href="fonts/fonts setup.css" type="text/css"/>
         <script src="Js/Angular.js"></script>
     </head>
     <body ng-app="user-data" ng-controller="userCtrl" id="userCtrl" style="overflow-x:hidden;background: #25a5d5">
         <div class="head">
-            <img src="{{image}}" pickup="scrolled"/>
-            <p class="uname" pickup="scrolled">{{name}}</p>
-            <div class="side-one">
+            <p class="uname" pickup="scrolled"><i>{{name}}</i></p>
+            <nav class="options" display='none'>
+            <nav class="popbase">
+                <a href="ID.html?" class="fa fa-sign-out"><span>Sign_out</span></a>
+            </nav>
+        </nav>
+        </div>
+        <div class="side-one">
                 <ul class="hidable">
-                    <li id="li1" state="inactive"><a href="#gen">General</a></li>
-                    <li id="li2" state="inactive"><a href="#link">Linked Account</a></li>
-                    <li id="li3" state="inactive"><a href="#pay">Payments</a></li>
-                    <li id="li4" state="inactive"><a href="#sec">Security</a></li>
+                    <li id="li1" state="inactive"><a href="account.html#gen">General</a></li>
+                    <li id="li2" state="inactive"><a href="account.html#link">Linked Account</a></li>
+                    <li id="li3" state="inactive"><a href="account.html#pay">Payments</a></li>
+                    <li id="li4" state="inactive"><a href="account.html#sec">Security</a></li>
                 </ul>
                 <ul class="fa slidable">
-                    <li class="for-mobile"><a href="?user" span-color="red"><span class="icon fa-user-circle"></span><span class="text">User Setting</span></a></li>
+                    <li class="for-mobile"><a href="account.html" span-color="red"><span class="icon fa-user-circle"></span><span class="text">User Setting</span></a></li>
                     <li><a href="Activity.html?cart" span-color="green"><span class="icon fa-cart-arrow-down"></span><span class="text">Cart</span></a></li>
                     <li><a href="Activity.html?transection" span-color="blue"><span class="icon fa-history"></span><span class="text">Transection</span></a></li>
                 </ul>
             </div>
-        </div>
         <div class="body" style="background: #fff;" id="user">
             <div class="part" id="gen">
                 <h1>General Setting</h1>
                 <h2>User account</h2>
                 <div class="form-container">
-                    <form method="post" action="C_name" class="half">
-                        <input type="text" class="half-input" disabled="true" value="{{name}}"/>
-                        <button type="submit" class="fa fa-pencil"></button>
-                    </form>
-                    <form action="post" action="C_email" class="half">
-                        <input type="email" class="half-input" disabled="true" value="{{email}}"/>
-                        <button type="submit" class="fa fa-pencil"></button>
-                    </form>
+                    
                     <h2>Personal Details</h2>
                     <div class="person">
                         <form method="post" action="C_person" class="full">
-                            <input type="text" width="half" placeholder="prefered language" name="Language"/>
                             <input type="number" width="half" placeholder="Phone number" name="Phone"/>
-                            <input type="text" width="half" placeholder="address line1" name="address1"/>
-                            <input type="text" width="half" placeholder="address line2" name="address2"/>
+                            <input type="text" width="half" placeholder="address line1" name="address"/>
                             <input type="text" width="half" placeholder="Region" name="Country"/>
                             <input type="text" width="half" placeholder="State" name="State"/>
                             <input type="text" width="half" placeholder="City" name="city"/>
@@ -127,11 +122,7 @@ You will be directed to PayPal to authorize your payment method, then you will b
                 <div class="form-container">
                     <h2>Change Password</h2>
                     <form action="pass" method="post" class="full">
-                        <input type="password" width="more-half" name="current" placeholder="Current Password">
-                        <input type="password" width="half" name="current" placeholder="New Password">
-                        <input type="password" width="half" name="current" placeholder="confirm New Password">
                         <button type="submit">Update</button>
-                        <button type="reset">Cancel</button>
                     </form>
                 </div>
                 <div class="form-container">
@@ -144,10 +135,10 @@ You will be directed to PayPal to authorize your payment method, then you will b
  
                 </div>
                 <div class="form-container">
-                    <h2>E-Mail Authentication</h2>
+                    <h2>Change your E-Mail</h2>
                     <form action="authanticate" method="get" class="full">
-                        <p>Use a security code that will be sent to the email address associated with your account when you sign in as your Two-Factor Authentication (2FA).</p>
-                        <button type="submit">Enable E-Mail authentication</button>                       
+                        <p>user logs in by email id which is most important refrencial part</p>
+                        <button type="submit">Change E-Mail Id</button>                       
                     </form>
                 </div>
                 

@@ -2,14 +2,15 @@
 
 /*customised theme of scroll bar*/
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
   background: transparent; 
 }
 ::-webkit-scrollbar-thumb {
-  background: #e2e2e2; 
-  border-radius:10px;
+  background: linear-gradient(#0ff,#00f,#0ff);
+  border-radius: 5px;
+
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #eee; 
@@ -20,6 +21,8 @@
 .head img{
      border-radius:20vw;
 }
+.uname i{color:#fff;}
+.uname i:hover{text-shadow:0px 0px 4px;}
 .Pname a{color: #fff; text-decoration:none;}
 .Pname a:hover{color: #fff; text-shadow:0px 0px 4px #bbb ;}
 .options a{
@@ -293,7 +296,7 @@ border-radius: 5px;
 .card{
     border:none;
     box-shadow: 0px 0px 3px;
-    border-radius: 10px;
+    
     background: #fff;
     
 }
@@ -304,9 +307,14 @@ border-radius: 5px;
 }
 .card button{
     border: none;
-    border-radius:5px;
-    background-color: #555;
+    background-color: #222;
     color: #fff;
+}
+.card button:hover{
+    background-color: #444;
+}
+.card button:active{
+    background-color: #000;
 }
 .payment-way{
     background: #ddd;
@@ -341,7 +349,7 @@ border-radius: 5px;
 
 body{
    
-    background-image: url('https://ayushmaanjain.github.io/e-commerce/Pic/products/bg.jpeg');
+    background-image: url('http://localhost:8383/HTML5ApplicationManual/Pic/products/bg.jpeg');
     background-size:100%;
     
 }
@@ -351,9 +359,9 @@ body{
     .popbase{
         border: solid;
         color:#fff;
-        border-width:8px 8px 0px 0px;
-        border-radius:0px 0px 0px 0px;
-        border-color: #505 #93c transparent transparent;
+        border-width:8px 8px;
+        border-radius:18px 0px 18px 18px;
+        border-color:transparent transparent;
         background: #93c;
         
     }

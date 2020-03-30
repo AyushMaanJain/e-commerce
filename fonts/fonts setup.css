@@ -23,7 +23,7 @@
     src:url('../fonts/Amperzand.ttf') format('truetype');
 }
 
-.Pname{
+.Pname,.uname{
     font-family: Amperzands;
     font-style: italic;
 }

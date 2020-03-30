@@ -35,12 +35,8 @@ if(w>992){
     maxMargin=40;
     textMargins=6/100*w;
     paymentWay=40+30;
-    $("img").css("width","20vw");
-    $("img").css("height","20vw");
-    $("img").css("margin-left","40vw");
-    $("img").css("margin-right","40vw");
-    
-    $(".uname").css("margin-top",-10+"px");
+
+
 }else
 if(w>768){
     bodypadding=25/100*w;
@@ -51,12 +47,9 @@ if(w>768){
     textMargins=8/100*w;
     halfFormSize=(bodywidth-40);
     paymentWay=40+30;
-    $("img").css("width","25vw");
-    $("img").css("height","25vw");
-    $("img").css("margin-left","37.5vw");
-    $("img").css("margin-right","37.5vw");
+
     
-     $(".uname").css("margin-top",-10+"px");
+
 }else
 if(w<=768){
     bodypadding=30/100*w;
@@ -67,57 +60,19 @@ if(w<=768){
     textMargins=11/100*w;
     halfFormSize=bodywidth-40;
     paymentWay=30;
-    $("img").css("width","30vw");
-    $("img").css("height","30vw");
-    $("img").css("margin-left","35vw");
-    $("img").css("margin-right","35vw");
-    $("[width=auto]").css("width",(bodywidth-paymentWay-30)+"px");
-    $(".uname").css("margin-top",-10+"px");
+
+
     
 }
 
 {$(".body").css("width",bodywidth+"px");
-$(".body").css("padding-top",bodypadding+10+"px");
 $(".part").css("width",bodywidth-40+"px");
 
 $(".payment-way").css("width",(bodywidth-paymentWay)+"px");
 $(".half-input").css("width",halfFormSize-40-55+"px");}
 
 
-$(window).scroll(function(){
-    //scroll data
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var scrollLimit=200;
-    //range
-    var SizeRange=maxSize-minSize;
-    var marginRange=maxMargin-minMargin;
-    var textRange=textMargins;
-    //function
-    var ScrollSize=winScroll/scrollLimit*SizeRange;
-    var ScrollMargin=winScroll/scrollLimit*marginRange;
-    var ScrollTextMargin=winScroll/scrollLimit*textRange;
-    //final variable
-    var sizeOnScroll=maxSize-ScrollSize;
-    var marginOnScroll=maxMargin-ScrollMargin;
-    
-    
-    
-    if(winScroll<200){
-        $("img").css("width",sizeOnScroll+"vw");
-        $("img").css("height",sizeOnScroll+"vw");
-        $("img").css("margin-left",marginOnScroll+"vw");
-        $("img").css("margin-right",marginOnScroll+"vw");
-        $(".uname").css("margin-top",-10-ScrollTextMargin+"px");
-    }
-    if(winScroll>=200){
-        $("img").css("width",minSize+"vw");
-        $("img").css("height",minSize+"vw");
-        $("img").css("margin-left",minMargin+"vw");
-        $("img").css("margin-right",minMargin+"vw");
-        $(".uname").css("margin-top",-10-textRange+"px");
-    }
-     
-});
+
 $(window).resize(function(){
    w=window.innerWidth;
 if(w>992){
@@ -129,12 +84,8 @@ if(w>992){
     maxMargin=40;
     textMargins=6/100*w;
     paymentWay=40+30;
-    $("img").css("width","20vw");
-    $("img").css("height","20vw");
-    $("img").css("margin-left","40vw");
-    $("img").css("margin-right","40vw");
-    
-    $(".uname").css("margin-top",-10+"px");
+
+   
 }else
 if(w>768){
     bodypadding=25/100*w;
@@ -145,12 +96,8 @@ if(w>768){
     textMargins=8/100*w;
     halfFormSize=(bodywidth-40);
     paymentWay=40+30;
-    $("img").css("width","25vw");
-    $("img").css("height","25vw");
-    $("img").css("margin-left","37.5vw");
-    $("img").css("margin-right","37.5vw");
+
     
-     $(".uname").css("margin-top",-10+"px");
 }else
 if(w<=768){
     bodypadding=30/100*w;
@@ -161,17 +108,11 @@ if(w<=768){
     textMargins=11/100*w;
     halfFormSize=bodywidth-40;
     paymentWay=30;
-    $("img").css("width","30vw");
-    $("img").css("height","30vw");
-    $("img").css("margin-left","35vw");
-    $("img").css("margin-right","35vw");
-    $("[width=auto]").css("width",(bodywidth-paymentWay-30)+"px");
-    $(".uname").css("margin-top",-10+"px");
+
     
 }
 
 {$(".body").css("width",bodywidth+"px");
-$(".body").css("padding-top",bodypadding+10+"px");
 $(".part").css("width",bodywidth-40+"px");
 
 $(".payment-way").css("width",(bodywidth-paymentWay)+"px");

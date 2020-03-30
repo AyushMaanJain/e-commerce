@@ -15,10 +15,16 @@ and open the template in the editor.
         <script src="Js/Angular.js"></script>
     </head>
     <body ng-app="cart-data" ng-controller="userCtrl" id="userCtrl" style="overflow:hidden;background: #25a5d5">
-                <div class="head">
-            <img src="{{image}}" pickup="fixed"/>
-            <p class="uname" pickup="fixed">{{name}}</p>
-            <div class="side-one">
+
+                    <div class="head">
+            <p class="uname" pickup="scrolled"><i>{{name}}</i></p>
+            <nav class="options" display='none'>
+            <nav class="popbase">
+                <a href="ID.html?register" class="fa fa-sign-out"><span>Sign_out</span></a>
+            </nav>
+        </nav>
+        </div>
+        <div class="side-one">
                 <ul class="hidable">
                     <li id="li1" state="inactive"><a href="account.html#gen">General</a></li>
                     <li id="li2" state="inactive"><a href="account.html#link">Linked Account</a></li>
@@ -26,13 +32,13 @@ and open the template in the editor.
                     <li id="li4" state="inactive"><a href="account.html#sec">Security</a></li>
                 </ul>
                 <ul class="fa slidable">
-                    <li class="for-mobile"><a href="?user" span-color="red"><span class="icon fa-user-circle"></span><span class="text">User Setting</span></a></li>
-                    <li><a href="?cart" span-color="green"><span class="icon fa-cart-arrow-down"></span><span class="text">Cart</span></a></li>
-                    <li><a href="?transection" span-color="blue"><span class="icon fa-history"></span><span class="text">Transection</span></a></li>
+                    <li class="for-mobile"><a href="account.html" span-color="red"><span class="icon fa-user-circle"></span><span class="text">User Setting</span></a></li>
+                    <li><a href="Activity.html?cart" span-color="green"><span class="icon fa-cart-arrow-down"></span><span class="text">Cart</span></a></li>
+                    <li><a href="Activity.html?transection" span-color="blue"><span class="icon fa-history"></span><span class="text">Transection</span></a></li>
                 </ul>
             </div>
-        </div>
-                <div class="body" id="cart" style="height:100vh;background: #fff; overflow:scroll;">
+        
+            <div class="body" id="cart" style="height:100vh;background: #fff; overflow:scroll;">
             <div class="part">
                 <h1>User cart</h1>
                  <ul>
@@ -54,7 +60,7 @@ and open the template in the editor.
                 </ul>
             </div>
         </div>
-          <div class="body"  id="tran" style="height:100vh;background: #fff; overflow:scroll;">
+            <div class="body"  id="tran" style="height:100vh;background: #fff; overflow:scroll;">
             <div class="part">
                 <h1>User Purchases</h1>
                 <ul>

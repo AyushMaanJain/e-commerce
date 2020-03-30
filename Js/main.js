@@ -1,8 +1,22 @@
 $(document).ready(function(){
     var slide=1;
+    var slideLength=0;
+    
+    try{
+    var dom_el = document.querySelector("[ng-controller='ControllA']");
+    var ng_el = angular.element(dom_el);
+    var ng_el_scope = ng_el.scope();
+    var slideLength = ng_el_scope.len;
+    console.log(slideLength.toString());
+    }catch(excep){
+       console.log(excep.toString());
+    }
+    
+    
     var sideOpen=false;
     var popup=false;
     var w=window.innerWidth;
+
     
   $(".popup").click(function(){
       if(popup){
@@ -49,20 +63,20 @@ $(document).ready(function(){
       $(".searchCon").attr("display","none");
   });
   
-  $(".sub-card").click(function(){
-      
-      try{
-      var href=$(this).attr("href");
-      window.open(href,"_self");
-      }catch(e){
-      var error=e;
-      alert(error);
-      }
-      });
+
 
  if(w>768){
       $(".body").css("width",(w-250)+"px");
       $(".carousel_container").css("height",(w-300)/3+"px");
+      if(w>992){
+          $(".card").css("width",((w-250)/5)-10+"px");
+          $(".card > img").css("width",((w-250)/5)-10+"px");
+          $(".card > img").css("height",((w-250)/5)-10+"px");
+      }else if(w<992){
+          $(".card").css("width",((w-250)/4)-10+"px");
+          $(".card > img").css("width",((w-250)/4)-10+"px");
+          $(".card > img").css("height",((w-250)/4)-10+"px");
+      }
         }
 else if(w<=768){
       $(".body").css("width",(w+0)+"px");
@@ -70,75 +84,45 @@ else if(w<=768){
       }
   
   $("#shiftL").click(function(){
-  if(slide===1){
+      if(slide===1){
+          $("#text"+slide).attr("active","false");
+          $("#pic"+slide).attr("active","false");
+          $("#port"+slide).attr("active","false");
+          slide=slideLength;
+          $("#text"+slide).attr("active","true");
+          $("#pic"+slide).attr("active","true");
+          $("#port"+slide).attr("active","true");
+      }else if(slide>1){
+          $("#text"+slide).attr("active","false");
+          $("#pic"+slide).attr("active","false");
+          $("#port"+slide).attr("active","false");
+          slide--;
+          $("#text"+slide).attr("active","true");
+          $("#pic"+slide).attr("active","true");
+          $("#port"+slide).attr("active","true");
+      }
       
-      $("#textA").attr("active","false");
-      $("#textC").attr("active","true");
-      $("#picA").attr("active","false");
-      $("#picC").attr("active","true");
-      $("#port1").attr("active","false");
-      $("#port3").attr("active","true");
-      $(".desc").css("background","#00f");
-      slide=3;
-  // alert(slide);
-     } else
-  if(slide===3){
-      $("#textC").attr("active","false");
-      $("#textB").attr("active","true");
-      $("#picC").attr("active","false");
-      $("#picB").attr("active","true");
-      $("#port3").attr("active","false");
-      $("#port2").attr("active","true");
-      $(".desc").css("background","#000");
-       slide=2;
-      //alert(slide);
-     } else
-  if(slide===2){
-      $("#textB").attr("active","false");
-      $("#textA").attr("active","true");
-      $("#picB").attr("active","false");
-      $("#picA").attr("active","true");
-      $("#port2").attr("active","false");
-      $("#port1").attr("active","true");
-      $(".desc").css("background","#207");
-      slide=1;
-      //alert(slide);
-     } 
   });
   $("#shiftR").click(function(){
-  if(slide===1){
-      $("#textA").attr("active","false");
-      $("#textB").attr("active","true");
-      $("#picA").attr("active","false");
-      $("#picB").attr("active","true");
-      $("#port1").attr("active","false");
-      $("#port2").attr("active","true");
-      $(".desc").css("background","#000");
-      slide=2;
-  // alert(slide);
-     } else
-  if(slide===3){
-      $("#textC").attr("active","false");
-      $("#textA").attr("active","true");
-      $("#picC").attr("active","false");
-      $("#picA").attr("active","true");
-      $("#port3").attr("active","false");
-      $("#port1").attr("active","true");
-      $(".desc").css("background","#207");
-      slide=1;
-      //alert(slide);
-     } else
-  if(slide===2){
-      $("#textB").attr("active","false");
-      $("#textC").attr("active","true");
-      $("#picB").attr("active","false");
-      $("#picC").attr("active","true");
-      $("#port2").attr("active","false");
-      $("#port3").attr("active","true");
-      $(".desc").css("background","#00f");
-      slide=3;
-      //alert(slide);
-     } 
+      
+      if(slide===slideLength){
+          $("#text"+slide).attr("active","false");
+          $("#pic"+slide).attr("active","false");
+          $("#port"+slide).attr("active","false");
+          slide=1;
+          $("#text"+slide).attr("active","true");
+          $("#pic"+slide).attr("active","true");
+          $("#port"+slide).attr("active","true");
+      }else if(slide<slideLength){
+          $("#text"+slide).attr("active","false");
+          $("#pic"+slide).attr("active","false");
+          $("#port"+slide).attr("active","false");
+          slide++;
+          $("#text"+slide).attr("active","true");
+          $("#pic"+slide).attr("active","true");
+          $("#port"+slide).attr("active","true");
+      }
+ 
   });
   
   $(window).resize(function(){
@@ -146,6 +130,16 @@ else if(w<=768){
       if(w>768){
       $(".body").css("width",(w-250)+"px");
       $(".carousel_container").css("height",(w-300)/3+"px");
+      if(w>992){
+          $(".card").css("width",((w-250)/5)-10+"px");
+          $(".card > img").css("width",((w-250)/5)-10+"px");
+          $(".card > img").css("height",((w-250)/5)-10+"px");
+      }else if(w<992){
+          $(".card").css("width",((w-250)/4)-10+"px");
+          $(".card > img").css("width",((w-250)/4)-10+"px");
+          $(".card > img").css("height",((w-250)/4)-10+"px");
+      }
+      
         }
         else if(w<=768){
       $(".body").css("width",(w+0)+"px");

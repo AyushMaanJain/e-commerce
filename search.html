@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <title>none</title>
+        <link rel="stylesheet" href="css/theme.css" type="text/css">
+        <link rel="stylesheet" href="css/basic.css" type="text/css">
+        <link rel="stylesheet" href="fonts/fonts setup.css" type="text/css"/>
+        <link rel="stylesheet" href="Pic/PictureStyling.css" type="text/css"/>
+        
+        <meta charset="UTF-8">
+        <script src="Js/Angular.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body  style="overflow-x:hidden">
+        <nav class="head">
+            <Button class="slideToggle">&#9776;</Button>
+        <span class="Pname"><a href="index.html">Ailmax</a></span>
+        <nav class="options" display='none'>
+            <nav class="popbase">
+                <a href="ID.html?login" class="fa fa-sign-in"><span style="">sign in</span></a>
+            <a href="ID.html?register" class="fa fa-user-circle-o"><span>sign up</span></a>
+            </nav>
+        </nav>
+        <button class="popup fa fa-user"></button>
+        <button class="searchToggle fa fa-search"></button>
+        <div class="searchCon" display="none">
+            <span class="back fa fa-arrow-left"></span>
+            <form method="get" action="search.html" class="searchBox">
+            <span class="fa fa-search"></span>
+            <input type="text" name="search" placeholder="search..." autocomplete="off"/>
+        </form>
+        </div>
+        </nav>
+       
+        <div class="slidenav" style="overflow: scroll" expand="false">
+            
+            <a href="#">Free</a>
+            <a href="#">Paid</a>
+            <span>Value  </span>
+            <a href="#">Trending</a>
+            <a href="#">Latest</a>
+           
+            <span>Uses </span>
+            <a href="#">Anti Virus</a>
+            <a href="#">Operating System</a>
+            <a href="#">Developement</a>
+            <a href="#">3D CAD</a>
+            <a href="#">Graphic Design</a>
+            <a href="#">Data/Financing</a>
+            <a href="#">Others</a>
+            
+        </div>
+        <div class="body" ng-app="Search_pg" ng-controller="CtrlS">
+            <div class="horizontal-list" style="">
+                <h2>Most Relevant</h2>
+                <div class="cards">
+                <div ng-repeat="x in results" class="card ">
+                        <img src="{{x.img}}">
+                        <h3>{{x.name}}</h3>
+                        <p>{{x.price}}</p>
+                        <form action="addCart" method="get">
+                            <input type="hidden" value="{{x.name}}"/>
+                            <button type="submit">Add to Cart</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="Js/jquery-3.4.1.js"></script>
+        <script src="Js/main.js"></script>
+        <script>
+            var app = angular.module('Search_pg', []);
+app.controller('CtrlS', function($scope) {
+    $scope.results = [
+      {name:"Gambas",           img:"Pic/icons/Gambas.png",           price:"Free"},
+      {name:"Sap",              img:"Pic/icons/sap-logo.png",         price:"\u20B9"+"49 324 "},
+      {name:"QuickHeal",        img:"Pic/icons/QuickHeal.png",        price:"\u20B9"+"1 909"},
+      {name:"Coral Draw",       img:"Pic/icons/CoralDraw.jpg",        price:"\u20B9"+"55 000"},
+      {name:"Adobe Illustrator",img:"Pic/icons/Adobe illustrator.png",price:"\u20B9"+"2 300"},
+      {name:"MacOS",        img:"Pic/icons/MacOS.png",       price:"\u20B9"+"2 000"},
+      {name:"Maya",         img:"Pic/icons/Maya.jpg",        price:"\u20B9"+"11 000"},
+      {name:"Unity",        img:"Pic/icons/unity.jpg",       price:"\u20B9"+"8 875"},
+      {name:"Norton",       img:"Pic/icons/Norton.jpg",      price:"\u20B9"+"3 500"},
+      {name:"Visual Studio",img:"Pic/icons/VisualStudio.png",price:"\u20B9"+"3 195"},
+      {name:"MySQL",         img:"Pic/icons/mysql.jpg",         price:"Free"},
+      {name:"Blender",       img:"Pic/icons/blender.jpg",       price:"Free"},
+      {name:"zip Book",      img:"Pic/icons/zipBooks.png",      price:"Free"},
+      {name:"Avira",         img:"Pic/icons/avira.png",         price:"Free"},
+      {name:"Android Studio",img:"Pic/icons/Android Studio.png",price:"Free"}
+  ];
+});
+        </script>
+    </body>
+</html>

@@ -269,28 +269,28 @@ margin-bottom:0px;
     font-family: sans-serif;
 }
 .horizontal-list .cards{
-    width: calc(100%-20px);
+    width:100%;
     float: left;
 }
-.cardA,.cardB,.cardC,.cardD,.cardE{
-    width:17%;
-    margin-left:1%;
-    margin-right:1%;
-    float:left; 
-}
-.card img{
-    width:100%;
+.card{
+    float: left;
+    margin: 5px;
+    overflow: hidden;
 }
 .card h3{
-    margin: 10px 0px;
+    width: 100%;
     text-align: center;
 }
+.card p{
+    width: 100%;
+    text-align: center;
+      color: #555;
+  font-size: 18px;
+  font-weight: bolder;
+}
 .card button{
-    width: 95%;
-    font-size:18px;
-    padding: 10px 0px;
-    margin:5px 2.5%;
-    float: left;
+    width: 100%;
+    padding: 10px 00px;
 }
 
 .bottom{
@@ -330,15 +330,7 @@ padding-left: 20px;
 }
 
 @media(max-width:992px){
-    .cardA,.cardB,.cardC,.cardD{
-        width:23%;
-        margin-left:1%;
-        margin-right:1%;
-    }
-    .cardE{
-        width: 0px;
-        display: none;
-    }
+
     .image,.desc{width: 100%;}
     .desc{height:auto;}
     .carousel_container{
@@ -350,15 +342,7 @@ padding-left: 20px;
     .body[at="id"]{
         padding:0px;
     }
-    .cardA,.cardB,.cardC{
-        width:31%;
-        margin-left:1%;
-        margin-right:1%;
-    }
-    .cardE,.cardD{
-        width: 0px;
-        display: none;
-    }
+
     .slideToggle,.popup,.searchToggle{
         display: block;
     }
