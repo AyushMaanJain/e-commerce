@@ -19,6 +19,8 @@ $(document).ready(function(){
      $("#register").css("display","none");
  }else  if(location.endsWith("register")){
      $("#Login").css("display","none");
+ }else{
+     $("#register").css("display","none");
  }
  
  $(window).resize(function(){

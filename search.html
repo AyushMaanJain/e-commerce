@@ -57,9 +57,11 @@
                 <h2>Most Relevant</h2>
                 <div class="cards">
                 <div ng-repeat="x in results" class="card ">
+                    <a href="product.html?{{x.name}}">
                         <img src="{{x.img}}">
                         <h3>{{x.name}}</h3>
                         <p>{{x.price}}</p>
+                    </a>
                         <form action="addCart" method="get">
                             <input type="hidden" value="{{x.name}}"/>
                             <button type="submit">Add to Cart</button>

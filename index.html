@@ -10,9 +10,7 @@
         <meta charset="UTF-8">
         <script src="Js/Angular.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            .card img{}
-        </style>
+       
     </head>
     <body style="overflow-x:hidden">
         <nav class="head">
@@ -22,7 +20,7 @@
             <nav class="popbase">
                 <a href="account.html" class="fa fa-user"><span style="">User</span></a>
                 <a href="Activity.html#cart" class="fa fa-cart-arrow-down"><span>cart</span></a>
-                <a href="ID.html?register" class="fa fa-sign-out"><span>Sign_out</span></a>
+                <a href="ID.html?login" class="fa fa-sign-out"><span>Sign_out</span></a>
             </nav>
         </nav>
         <button class="popup fa fa-user"></button>
@@ -83,10 +81,12 @@
             <div class="horizontal-list" style="">
                 <h2>Latest</h2>
                 <div class="cards">
-                    <div ng-repeat="x in latest" class="card card{{$index}}">
+                    <div ng-repeat="x in latest" class="card" last="{{$last}}">
+                        <a href="product.html?{{x.name}}">
                         <img src="{{x.img}}">
                         <h3>{{x.name}}</h3>
                         <p>{{x.price}}</p>
+                        </a>
                         <form action="addCart" method="get">
                             <input type="hidden" value="{{x.name}}"/>
                             <button type="submit">Add to Cart</button>
@@ -98,10 +98,12 @@
             <div class="horizontal-list" style="">
                 <h2>Latest</h2>
                 <div class="cards">
-                    <div ng-repeat="x in free" class="card">
+                    <div ng-repeat="x in free" class="card" last="{{$last}}">
+                        <a href="product.html?{{x.name}}">
                         <img src="{{x.img}}">
                         <h3>{{x.name}}</h3>
                         <p>{{x.price}}</p>
+                        </a>
                         <form action="addCart" method="get">
                             <input type="hidden" value="{{x.name}}"/>
                             <button type="submit">Add to Cart</button>
@@ -113,10 +115,12 @@
             <div class="horizontal-list" style="">
                 <h2>Latest</h2>
                 <div class="cards">
-                    <div ng-repeat="x in paid" class="card">
+                    <div ng-repeat="x in paid" class="card" last="{{$last}}">
+                        <a href="product.html?{{x.name}}">
                         <img src="{{x.img}}">
                         <h3>{{x.name}}</h3>
                         <p>{{x.price}}</p>
+                        </a>
                         <form action="addCart" method="get">
                             <input type="hidden" name="product" value="{{x.name}}"/>
                             <button type="submit">Add to Cart</button>
@@ -157,7 +161,7 @@ app.controller('ControllA', function($scope) {
   $scope.offer = [
       {name:"Koding",    img:"Pic/koding.png",   data:"Now avilable in .msi extention"},
       {name:"Haudini",   img:"Pic/haudini.png",  data:"getting 20% discount on Licence"},
-      {name:"Dream Waver",   img:"Pic/dw.jpg",  data:"getting 90% discount"},
+      {name:"Dream Waver",img:"Pic/dw.jpg",  data:"getting 90% discount"},
       {name:"Windows 10",img:"Pic/windows10.jpg",data:"getting 50% discount on Product-key"}
   ];
   $scope.len=$scope.offer.length;

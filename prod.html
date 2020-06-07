@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/theme.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="fonts/fonts setup.css" type="text/css"/>
+        <style>
+            body{margin: 0;
+                 background: none;
+            }
+            .baseimg{
+                padding-top: 400px;
+                background-attachment: fixed;
+                background-image: url(Pic/windows10.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position:center;
+                width: 100%;
+                opacity: 1;
+                    }
+                    .fixed{
+                        display: block;
+                        position: fixed
+                    }
+                    .fixed[display="none"]{
+                        display: none;
+                    }
+                    .head{
+                        
+                        margin-left: auto;
+                        margin-right: auto;
+                        padding:20px;
+                        font-family: sans-serif;
+                        width: 100%;
+                    }
+                    #Ohead{
+                        width: 900px;
+                    }
+                    .icon{margin-top: 10px;
+                        width: 50px;}
+                    .heading{ padding: 10px;
+                              font-weight: 500;
+                   
+                            font-size: 30px;}
+                    .body{height: 1000px;}
+                    .fadehead{
+                        width: 100%;
+                        padding: 0;
+                    }
+                    .options{
+                        margin-left: auto;
+                        border-spacing: 5px;
+                    }
+                    .options button:focus{
+                        outline: none;
+                    }
+                    .options button{
+                        padding: 10px;
+                        border: none;
+                        border-radius: 15px;
+                        
+                    }
+        </style>
+    </head>
+    <body>
+        <div class="head fixed" display="none">
+            <table>
+                <tr>
+                    <td><img class="icon" src="Pic/icons/windows10.png"></td>
+                    <td><span class="heading">Windows 10 Pro 2019</span></td>
+                </tr>
+            </table> 
+        </div>
+        <div class="fadehead">
+            <div class="baseimg">
+                            <div id="Ohead" class=" head">
+                    <table>
+                        <tr><td><img class="icon" src="Pic/icons/windows10.png"></td>
+                            <td><span class="heading">Windows 10 Pro 2019</span></td>
+                        </tr>
+                    </table>
+                    <table class="options">
+                        <tr>
+                            <td><form method="get" target="buy">
+                    <input type="hidden" value="1234" name="product">
+                    <button type="submit">Buy &#8377;1234</button>
+                </form></td>
+                <td><form method="post" target="Addcart">
+                    <input type="hidden" value="1234" name="product">
+                    <button type="submit" class="fa fa-cart-plus"> Cart</button>
+                </form></td>
+                        </tr>
+                    </table>
+            </div>
+            </div>
+
+        </div>
+        <div class="body"></div>
+        <script src="Js/jquery-3.4.1.js"></script>
+        <script>
+            $(document).ready(function(){
+                var head=document.getElementById("Ohead");
+                var vizPoint=head.offsetTop+head.offsetHeight;
+                
+                $(window).scroll(function(){
+                    var scrolled=window.pageYOffset;
+                   if(scrolled>=vizPoint){
+                       $(".fixed").slideDown();
+                   }else{
+                       $(".fixed").slideUp();
+                   }
+                });
+            });
+        </script>
+    </body>
+</html>

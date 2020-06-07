@@ -22,12 +22,10 @@ $(".body").css("padding-top",firstHead+200+"px");
     if (scrolled > firstHead) {
     $(".header").addClass("fix-head");
     $(".header").css("background","rgba(153,51,204,1)");
-    if(scrolled < (firstHead+headerHeight)){
-        $(".fixed-container").css("margin-top",25+scrollForHeadSize+"px");   
-    }else{
-       $(".fixed-container").css("margin-top",25+"px");
-    }
+    $(".header").find(".fixed-container").slideUp();
+
   } else {
+     $(".header").find(".fixed-container").slideDown(); 
     $(".fixed-container").css("margin-top",25+headerHeight+"px");
     $(".header").removeClass("fix-head");
     $(".header").css("background","rgba(153,51,204,"+scrollForHead+")");

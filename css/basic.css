@@ -10,6 +10,28 @@ left: 0;
 position: fixed;
 }
 
+.message{
+    width: 100%;
+    font-size: 100px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+  @keyframes example {
+  0%   {transform: rotate(0deg)}
+  100% {transform: rotate(720deg);}
+  
+}
+.loader{
+    animation-name: example;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    margin-top:50px;
+    margin-left: auto;
+    margin-right: auto;
+    height:65px;
+    width: 65px;
+}
 .Pname {
 margin-left:35px;
 float: left;
@@ -277,16 +299,22 @@ margin-bottom:0px;
     margin: 5px;
     overflow: hidden;
 }
+.card a{
+    text-decoration: none;
+}
 .card h3{
+    color: #000 ;
+
     width: 100%;
     text-align: center;
 }
 .card p{
+    color: #555;
+    
     width: 100%;
     text-align: center;
-      color: #555;
-  font-size: 18px;
-  font-weight: bolder;
+    font-size: 18px;
+    font-weight: bolder;
 }
 .card button{
     width: 100%;
@@ -335,6 +363,9 @@ padding-left: 20px;
     .desc{height:auto;}
     .carousel_container{
     margin-bottom:300px;
+    }
+    .card[last="true"]{
+        display: none;
     }
 }
 
@@ -437,6 +468,18 @@ padding-left: 20px;
  margin:0px 20px;
 float: none;
 }
+.card img{
+    float: left;
+}
+.card h3{
+    width: 50%;
+    float: left;
+}
+.card p{
+    width: 50%;
+    float: left;
+}
+
 .outer{
     padding-left:30px;
     padding-right:30px;

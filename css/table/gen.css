@@ -1,0 +1,203 @@
+body{
+    margin: 0px;
+    padding: 0px;
+
+}
+.body{
+        position: fixed;
+    float:left;
+    width: 100vw;
+    height: 100%;
+}
+.tab_host{
+    position: fixed;
+    width:100vw; 
+    height: 100%;
+    margin-top:10px;
+}
+.tab_host .tabs{
+    margin: 0px;
+    width: 100%;
+    list-style-type: none;
+    float: left;
+    padding:10px 0px 0px 0px;
+}
+.tab_host .tabs li{
+    float: left;
+}
+.tab_host .tabs button{
+    padding: 10px 0px;
+    border: 1px solid;
+    border-bottom: 0px;
+}
+.tab_host .tab_body{
+    width: 100%;
+    margin-left: 3px;
+    overflow: scroll;
+    float: left;
+}
+
+.tab_body[visible="true"]{
+    display: initial;
+}
+.tab_body[visible="false"]{
+    display: none
+}
+.tab_body table button{
+    border: none;
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 15px;
+    margin-right: 5px;
+}
+.tab_body table thead{
+    
+}
+.tab_body table{
+  margin-top: 10px;
+  font-family: sans-serif;
+  border-collapse: separate;
+  width: 100%;
+}
+
+.tab_body table td,.tab_body table th{
+ text-align: center;
+  padding: 8px 0px;
+}
+.blur_pop{
+    position: fixed;
+    overflow: scroll;
+    float: left;
+    width:100vw;
+    height:100vh;
+    display: none;
+    background: rgba(120 ,120 ,120, 0.8);
+}
+.blur_pop .confim{
+    width: 100%;
+}
+.blur_pop .confim form{
+    float: right;
+margin-right: 60px;
+}
+.blur_pop .confim button{
+    padding: 10px;
+border-radius: 10px;
+}
+.blur_pop .confim{
+
+    
+    font-size: 20px;
+    position: fixed;
+    width: 100%;
+    font-weight: 600;
+    padding: 30px 20px;
+    margin-top: 40vh;
+    height: 20vh;
+    margin-bottom: 40vh;
+}
+.blur_pop .form-center h1{
+    font-family: sans-serif;
+    text-align: center;
+    margin:0px;
+}
+
+.blur_pop .form-center p{
+      margin-bottom: 0px;
+}
+.blur_pop .form-center input,.blur_pop .form-center div.dropdown div.modified{
+width: 380px;
+padding: 10px;
+border-radius: 10px;
+}
+.blur_pop .form-center div.dropdown div.modified{
+    padding-left: 30px;
+    width: 360px;
+      cursor: context-menu;
+}
+.blur_pop .form-center div.dropdown div.modified.active{
+    border-radius: 10px 10px 0px 10px;
+    padding-left: 30px;
+    width: 360px;
+}
+.blur_pop .form-center div.dropdown div.modified::before{
+  margin-top:5px;
+  content: "";
+  position:  absolute;
+  margin-left: -20px;
+  margin-right: 20px;
+  width: 0;
+  height: 0;
+   border: 6px solid transparent;
+  border-color:#000 transparent transparent transparent;
+
+}
+.blur_pop .form-center div.dropdown div.modified.active::before{
+    margin-top: 0px;
+    
+  content: "";
+  width: 0;
+  height: 0;
+   border: 6px solid transparent;
+  border-color: transparent transparent #000 transparent;
+}
+
+.blur_pop .form-center div.dropdown div.modified ul.sublist li{
+    
+    padding: 10px;
+        border-radius: 2px;
+}
+.blur_pop .form-center div.dropdown div.modified ul.sublist li:hover{
+    background: #ccc;
+    cursor: context-menu;
+}
+.blur_pop .form-center div.dropdown select.original{
+    display: none;
+}
+.blur_pop .form-center div.dropdown div.modified ul.sublist{
+    border-top: 1px solid #999;
+    box-shadow: 2px 2px 2px;
+    margin-top: 10px;
+    border-radius: 00px 00px 10px 10px;
+    background: white;
+    list-style-type: none;
+    margin-left: 0px;
+    position: absolute;
+    padding:10px;
+    width: 350px;
+    display: none;
+}
+
+
+.blur_pop .form-center .boolean{
+width: 380px;
+padding: 10px;
+margin-top: 20px;
+}
+.blur_pop .form-center .boolean *{
+  
+    padding: 9px;
+    font-weight:600;
+    font-family: initial;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.blur_pop .form-center button{
+margin-top: 20px;
+padding: 10px;
+border-radius: 10px;
+margin-left: 10px;
+font-weight: 600;
+}
+
+.blur_pop .form-center{
+ 
+    
+    margin-top: 30px;
+    padding: 20px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 40px;  
+}

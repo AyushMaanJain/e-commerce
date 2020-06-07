@@ -1,4 +1,5 @@
 .head{ background:#9933cc;}
+.head{ color: white;}
 
 /*customised theme of scroll bar*/
 ::-webkit-scrollbar {
@@ -27,6 +28,9 @@
 .Pname a:hover{color: #fff; text-shadow:0px 0px 4px #bbb ;}
 .options a{
 color: #fff;
+}
+.message{
+ background: linear-gradient(-65deg,rgba(000,255,255,0.84),rgba(000,255,255,0.84),rgba(000,255,000,0.84));   
 }
 .options a:hover{color: #fff;
 text-shadow:0px 0px 2px #bbb;
@@ -354,6 +358,165 @@ body{
     
 }
 .body{background: rgba(255,255,255,0.84);}
+
+/*table home theme added*/
+
+.tab_host .tabs button{
+    border-color: #fff;
+    background: linear-gradient(#333,#555,#555);
+    border-radius: 0px 0px 50px 50px;
+    font-weight: 900;
+    color: #fff;
+    transition: 0.1s;
+}
+.tab_host .tabs button:focus{
+    outline: none;
+}
+.tab_host .tabs button[active="true"]
+,.tab_host .tabs button:active {
+    background: linear-gradient(#333,#555,#fff);    
+    border-radius: 50px 50px 0px 0px;
+}
+.tab_host{
+    background: white;
+}
+.tab_host .tab_body{
+    margin-bottom: 10px;
+    border: 1px solid grey;
+    border-top:white;
+    border-radius: 0px 0px 10px 10px;
+}
+.tab_host .tab_body table th{
+    border-right: 1px solid white;
+    background: linear-gradient(#777,#222,#222,#777);
+    color: white;
+}
+.tab_host .tab_body table tr{
+    border-bottom: 1px solid #ddd;
+}
+tab_host tab_body table button{
+    background: linear-gradient(#777,#222,#222);
+    color: white;
+}
+/*blue*/
+.tab_host[theme="blue"] .tabs button{
+    background: linear-gradient(#0082b2,#33b5e5,#33b5e5);
+}
+.tab_host[theme="blue"] .tabs button[active="true"]
+,.tab_host[theme="blue"] .tabs button:active {
+    background: linear-gradient(#0082b2,#33b5e5,#fff);    
+   
+}
+.tab_host[theme="blue"] .tab_body table th{
+  background: linear-gradient(#33b5e5,#0082b2,#0082b2,#33b5e5);
+}
+.tab_host[theme="blue"] .tab_body table button{
+    background: linear-gradient(#33b5e5,#0082b2,#0082b2);
+    color: white;
+}
+/*green*/
+.tab_host[theme="green"] .tabs button{
+    background: linear-gradient(#009212,#33d555,#33d555);
+}
+.tab_host[theme="green"] .tabs button[active="true"]
+,.tab_host[theme="green"] .tabs button:active {
+    background: linear-gradient(#009212,#33d555,#fff);    
+   
+}
+.tab_host[theme="green"] .tab_body table th{
+  background: linear-gradient(#33d555,#009212,#009212,#33d555);
+}
+.tab_host[theme="green"] .tab_body table button{
+    background: linear-gradient(#33d555,#009212,#009212);
+    color: white;
+}
+/*saffron*/
+.tab_host[theme="saffron"] .tabs button{
+    background: linear-gradient(#940,#c60,#f93);
+}
+.tab_host[theme="saffron"] .tabs button[active="true"]
+,.tab_host[theme="saffron"] .tabs button:active {
+    background: linear-gradient(#940,#c60,#fff);    
+   
+}
+.tab_host[theme="saffron"] .tab_body table th{
+  background: linear-gradient(#f93,#940,#940,#f90);
+}
+.tab_host[theme="saffron"] .tab_body table button{
+  background: linear-gradient(#f93,#940,#940);
+  color: white; 
+}
+/*margenta*/
+.tab_host[theme="margenta"] .tabs button{
+    background: linear-gradient(#609,#93c,#93c);
+}
+.tab_host[theme="margenta"] .tabs button[active="true"]
+,.tab_host[theme="margenta"] .tabs button:active {
+    background: linear-gradient(#609,#93c,#fff);    
+   
+}
+.tab_host[theme="margenta"] .tab_body table th{
+  background: linear-gradient(#bf5fef,#609,#609,#bf5fef);
+}
+.tab_host[theme="margenta"] .tab_body table button{
+  background: linear-gradient(#bf5fef,#609,#609);
+  color: white;
+}
+.blur_pop .form-center input,
+.blur_pop .form-center div.dropdown div.modified,
+.blur_pop .form-center button,
+.blur_pop .confim button{
+    border:none;
+    color: #222;
+    background: white;
+}
+.blur_pop .form-center,.blur_pop .confim{
+    color: white;
+    background: black;
+}
+.blur_pop .confim[theme="margenta"]{
+    background: linear-gradient(15deg,#bf5fef,#609,#609,#bf5fef);
+}
+.blur_pop .confim[theme="green"]{
+    background: linear-gradient(15deg,#33d555,#009212,#009212,#33d555);
+}
+.blur_pop .confim[theme="blue"]{
+    background: linear-gradient(15deg,#33b5e5,#0082b2,#0082b2,#33b5e5);
+}
+.blur_pop .confim[theme="saffron"]{
+    background: linear-gradient(15deg,#f93,#940,#940,#f90);
+}
+.blur_pop .form-center[theme="margenta"]{
+    background: linear-gradient(15deg,#bf5fef,#609,#609,#bf5fef);
+}
+.blur_pop .form-center[theme="green"]{
+    background: linear-gradient(15deg,#33d555,#009212,#009212,#33d555);
+}
+.blur_pop .form-center[theme="blue"]{
+    background: linear-gradient(15deg,#33b5e5,#0082b2,#0082b2,#33b5e5);
+}
+.blur_pop .form-center[theme="saffron"]{
+    background: linear-gradient(15deg,#f93,#940,#940,#f90);
+}
+
+.blur_pop .form-center .boolean *{
+    background: rgba(255,255,255,0);
+    border: 1px #bbb solid;
+    color: #fff;
+    transition: 0.2s
+}
+.blur_pop .form-center .boolean *:hover{
+    cursor: pointer;
+    background: rgba(255,255,255,0.2);
+}
+.blur_pop .form-center .boolean[value="true"] .yes{
+    background: #fff;
+    color: #333;
+}
+.blur_pop .form-center .boolean[value="false"] .no{
+    background: #fff;
+    color: #333;
+}
 
 @media (max-width:768px){
     .popbase{

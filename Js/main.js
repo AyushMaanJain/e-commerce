@@ -70,17 +70,20 @@ $(document).ready(function(){
       $(".carousel_container").css("height",(w-300)/3+"px");
       if(w>992){
           $(".card").css("width",((w-250)/5)-10+"px");
-          $(".card > img").css("width",((w-250)/5)-10+"px");
-          $(".card > img").css("height",((w-250)/5)-10+"px");
+          $(".card > a > img").css("width",((w-250)/5)-10+"px");
+          $(".card > a > img").css("height",((w-250)/5)-10+"px");
       }else if(w<992){
           $(".card").css("width",((w-250)/4)-10+"px");
-          $(".card > img").css("width",((w-250)/4)-10+"px");
-          $(".card > img").css("height",((w-250)/4)-10+"px");
+          $(".card > a > img").css("width",((w-250)/4)-10+"px");
+          $(".card > a > img").css("height",((w-250)/4)-10+"px");
       }
         }
 else if(w<=768){
       $(".body").css("width",(w+0)+"px");
-      $(".carousel_container").css("height",(w-100)/2+"px");  
+      $(".carousel_container").css("height",(w-100)/2+"px"); 
+      $(".card").css("width",w-10+"px");
+      $(".card > a > img").css("width",(w/3)+"px");
+      $(".card > a > img").css("height",(w/3)+"px");
       }
   
   $("#shiftL").click(function(){
@@ -132,18 +135,21 @@ else if(w<=768){
       $(".carousel_container").css("height",(w-300)/3+"px");
       if(w>992){
           $(".card").css("width",((w-250)/5)-10+"px");
-          $(".card > img").css("width",((w-250)/5)-10+"px");
-          $(".card > img").css("height",((w-250)/5)-10+"px");
+          $(".card > a > img").css("width",((w-250)/5)-10+"px");
+          $(".card > a > img").css("height",((w-250)/5)-10+"px");
       }else if(w<992){
           $(".card").css("width",((w-250)/4)-10+"px");
-          $(".card > img").css("width",((w-250)/4)-10+"px");
-          $(".card > img").css("height",((w-250)/4)-10+"px");
+          $(".card > a > img").css("width",((w-250)/4)-10+"px");
+          $(".card > a > img").css("height",((w-250)/4)-10+"px");
       }
       
         }
-        else if(w<=768){
+       else if(w<=768){
       $(".body").css("width",(w+0)+"px");
-      $(".carousel_container").css("height",(w-100)/2+"px");  
+      $(".carousel_container").css("height",(w-100)/2+"px"); 
+      $(".card").css("width","100%");
+      $(".card > a > img").css("width",(w/3)+"px");
+      $(".card > a > img").css("height",(w/3)+"px");
       }
       
   });
